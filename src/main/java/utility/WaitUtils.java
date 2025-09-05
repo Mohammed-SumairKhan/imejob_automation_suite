@@ -2,6 +2,7 @@ package utility;
 
 import java.time.Duration;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -58,9 +59,9 @@ public class WaitUtils {
 	 * @param driver  WebDriver instance
 	 * @param element WebElement to wait for visibility
 	 */
-	public static void waitForElementVisible(WebDriver driver, WebElement element) {
+	public static void waitForElementVisible(WebDriver driver, By loc) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(propertiesReader.getExplicitWait()));
-		wait.until(ExpectedConditions.visibilityOf(element));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(loc));
 	}
 
 	/**
