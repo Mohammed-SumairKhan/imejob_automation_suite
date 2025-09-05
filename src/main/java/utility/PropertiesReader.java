@@ -3,25 +3,42 @@ package utility;
 import java.io.FileInputStream;
 import java.util.Properties;
 
+/**
+ * Utility class to read configuration values from config.properties file.
+ * This helps in keeping to read properties file value details externalized
+ * so they can be changed without touching the code.
+ */
 public class PropertiesReader {
-		Properties properties;
-		
-		public PropertiesReader() {
-			properties = new Properties();
-			try {
-				FileInputStream fileInputStream = new FileInputStream( System.getProperty("user.dir")
-						+"\\src\\main\\resources\\config.properties");
-				properties.load(fileInputStream);
-			} catch(Exception e) {
-				e.printStackTrace();
-			}
-		}
-		
-		public String getBrowserName() {
-			return properties.getProperty("browser");
-		}
-		
-		public String getUrl() {
-			return properties.getProperty("url");
-		}
+    Properties properties;  // Properties object to hold key-value pairs
+
+    public PropertiesReader() {
+        properties = new Properties();  // Initialize Properties object
+        try {
+            FileInputStream fileInputStream = new FileInputStream(
+                    System.getProperty("user.dir") + "\\src\\main\\resources\\config.properties");  // Load file from resources folder
+            properties.load(fileInputStream);  // Load key-value pairs into Properties object
+        } catch (Exception e) {
+            e.printStackTrace();  // Print stack trace if file is not found or loading fails
+        }
+    }
+    
+    /**
+     * Fetches the browser name from config.properties file
+     * Example: chrome, firefox, edge
+     *
+     * @return browser name as String
+     */
+    public String getBrowserName() {
+        return properties.getProperty("browser");  // Fetch browser name from config.properties
+    }
+    
+    /**
+     * Fetches the base URL from config.properties file
+     * Example: https://imejob.com
+     *
+     * @return URL as String
+     */
+    public String getUrl() {
+        return properties.getProperty("url");  // Fetch base URL from config.properties
+    }
 }
