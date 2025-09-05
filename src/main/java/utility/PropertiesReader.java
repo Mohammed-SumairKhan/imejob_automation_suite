@@ -41,4 +41,35 @@ public class PropertiesReader {
     public String getUrl() {
         return properties.getProperty("url");  // Fetch base URL from config.properties
     }
+    
+    /**
+     * Reads Hard wait time (in seconds) from the properties file.
+     * 
+     * @return Hard  wait duration in seconds
+     */
+    public int getHardWait() {
+    	return Integer.parseInt(properties.getProperty("hardwait"));
+    }
+    
+    /**
+     * Reads Implicit wait time (in seconds) from the properties file.
+     * 
+     * @return Implicit wait duration in seconds
+     */
+    public int getImplicitWait() {
+    	return Integer.parseInt(properties.getProperty("implicit"));
+    }
+    
+    /**
+     * Reads explicit wait time (in seconds) from the properties file.
+     * 
+     * @return explicit wait duration in seconds
+     */
+    public int getExplicitWait() {
+    	return Integer.parseInt(properties.getProperty("explicit"));
+    }
 }
+
+
+
+
