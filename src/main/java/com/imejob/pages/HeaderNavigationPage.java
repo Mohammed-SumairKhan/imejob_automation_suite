@@ -42,6 +42,14 @@ public class HeaderNavigationPage {
     // Locator for "Pricing" navigation link inside menu item
     @FindBy(xpath = "//div[@class='menu-item']//a[text() = 'Pricing']")
     WebElement pricing;
+    
+    // Locator for "job seeker" navigation link inside menu item
+    @FindBy(xpath = "//button[text() = 'Job Seeker']")
+    WebElement jobSeeker;
+    
+    // Locator for "employer" navigation link inside menu item
+    @FindBy(xpath = "//button[text() = 'Employer']")
+    WebElement employer;
 
     /**
      * Constructor to initialize the HeaderNavigationPage object.
@@ -103,4 +111,19 @@ public class HeaderNavigationPage {
     public void clickPricing() {
         pricing.click();
     }
+    
+    /**
+     * Clicks the "job seeker" link in the header menu.
+     */
+    public void clickJobSeeker() {
+        jobSeeker.click();
+    }
+    
+    /**
+     * Clicks the "employer" link in the header menu.
+     */
+    public void clickEmployer() {
+        employer.click();
+    }
+    
 }

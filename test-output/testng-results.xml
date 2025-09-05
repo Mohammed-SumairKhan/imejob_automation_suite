@@ -1,25 +1,274 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-05T00:29:21 IST" name="Default suite" finished-at="2025-09-05T00:29:25 IST" duration-ms="4075">
+  <suite started-at="2025-09-05T17:23:52 IST" name="Default suite" finished-at="2025-09-05T17:24:28 IST" duration-ms="36202">
     <groups>
     </groups>
-    <test started-at="2025-09-05T00:29:21 IST" name="Default test" finished-at="2025-09-05T00:29:25 IST" duration-ms="4075">
-      <class name="com.imejob.tests.HeaderNavigationTest">
-        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.HeaderNavigationTest@2b71e916]" started-at="2025-09-05T00:29:21 IST" name="start" finished-at="2025-09-05T00:29:24 IST" duration-ms="3236" status="PASS">
+    <test started-at="2025-09-05T17:23:52 IST" name="Default test" finished-at="2025-09-05T17:24:28 IST" duration-ms="36202">
+      <class name="com.imejob.tests.navigation.HeaderNavigationTest2">
+        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:23:52 IST" name="start" finished-at="2025-09-05T17:23:56 IST" duration-ms="4246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start -->
-        <test-method signature="jobSearch()[pri:0, instance:com.imejob.tests.HeaderNavigationTest@2b71e916]" started-at="2025-09-05T00:29:24 IST" name="jobSearch" finished-at="2025-09-05T00:29:24 IST" duration-ms="631" status="PASS">
+        <test-method signature="verifyHeaderNavigation(java.lang.String,java.lang.Runnable,java.lang.String)[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:23:56 IST" name="verifyHeaderNavigation" data-provider="headerLinks" finished-at="2025-09-05T17:23:57 IST" duration-ms="290" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Brand Logo]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.imejob.tests.navigation.HeaderNavigationTest2$$Lambda/0x000002228611b910@54227100]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[imejob]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- jobSearch -->
-        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.HeaderNavigationTest@2b71e916]" started-at="2025-09-05T00:29:24 IST" name="close" finished-at="2025-09-05T00:29:25 IST" duration-ms="166" status="PASS">
+        </test-method> <!-- verifyHeaderNavigation -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:23:57 IST" name="close" finished-at="2025-09-05T17:23:57 IST" duration-ms="396" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- com.imejob.tests.HeaderNavigationTest -->
+        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:23:57 IST" name="start" finished-at="2025-09-05T17:23:59 IST" duration-ms="2575" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="verifyHeaderNavigation(java.lang.String,java.lang.Runnable,java.lang.String)[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:23:59 IST" name="verifyHeaderNavigation" data-provider="headerLinks" finished-at="2025-09-05T17:24:00 IST" duration-ms="718" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Job Search]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.imejob.tests.navigation.HeaderNavigationTest2$$Lambda/0x000002228611bb30@37f21974]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[job-search/all-jobs]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeaderNavigation -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:00 IST" name="close" finished-at="2025-09-05T17:24:00 IST" duration-ms="274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:00 IST" name="start" finished-at="2025-09-05T17:24:04 IST" duration-ms="3220" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="verifyHeaderNavigation(java.lang.String,java.lang.Runnable,java.lang.String)[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:04 IST" name="verifyHeaderNavigation" data-provider="headerLinks" finished-at="2025-09-05T17:24:04 IST" duration-ms="318" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[About Us]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.imejob.tests.navigation.HeaderNavigationTest2$$Lambda/0x000002228611bd50@560cbf1a]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[about-us]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeaderNavigation -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:04 IST" name="close" finished-at="2025-09-05T17:24:04 IST" duration-ms="290" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:04 IST" name="start" finished-at="2025-09-05T17:24:07 IST" duration-ms="2744" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="verifyHeaderNavigation(java.lang.String,java.lang.Runnable,java.lang.String)[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:07 IST" name="verifyHeaderNavigation" data-provider="headerLinks" finished-at="2025-09-05T17:24:07 IST" duration-ms="244" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Contact Us]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.imejob.tests.navigation.HeaderNavigationTest2$$Lambda/0x0000022286119000@2db2cd5]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[contact-us]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeaderNavigation -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:07 IST" name="close" finished-at="2025-09-05T17:24:08 IST" duration-ms="346" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:08 IST" name="start" finished-at="2025-09-05T17:24:10 IST" duration-ms="2640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="verifyHeaderNavigation(java.lang.String,java.lang.Runnable,java.lang.String)[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:10 IST" name="verifyHeaderNavigation" data-provider="headerLinks" finished-at="2025-09-05T17:24:11 IST" duration-ms="260" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Join Community]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.imejob.tests.navigation.HeaderNavigationTest2$$Lambda/0x0000022286119220@4102b1b1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[community]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeaderNavigation -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:11 IST" name="close" finished-at="2025-09-05T17:24:11 IST" duration-ms="261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:11 IST" name="start" finished-at="2025-09-05T17:24:12 IST" duration-ms="1216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="verifyHeaderNavigation(java.lang.String,java.lang.Runnable,java.lang.String)[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:12 IST" name="verifyHeaderNavigation" data-provider="headerLinks" finished-at="2025-09-05T17:24:14 IST" duration-ms="2251" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Blogs]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.imejob.tests.navigation.HeaderNavigationTest2$$Lambda/0x0000022286119440@737edcfa]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[blogs]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeaderNavigation -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:14 IST" name="close" finished-at="2025-09-05T17:24:15 IST" duration-ms="362" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:15 IST" name="start" finished-at="2025-09-05T17:24:16 IST" duration-ms="1397" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="verifyHeaderNavigation(java.lang.String,java.lang.Runnable,java.lang.String)[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:16 IST" name="verifyHeaderNavigation" data-provider="headerLinks" finished-at="2025-09-05T17:24:18 IST" duration-ms="2265" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Pricing]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.imejob.tests.navigation.HeaderNavigationTest2$$Lambda/0x0000022286119660@99a65d3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[pricing]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeaderNavigation -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:18 IST" name="close" finished-at="2025-09-05T17:24:19 IST" duration-ms="274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:19 IST" name="start" finished-at="2025-09-05T17:24:22 IST" duration-ms="3154" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="verifyHeaderNavigation(java.lang.String,java.lang.Runnable,java.lang.String)[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:22 IST" name="verifyHeaderNavigation" data-provider="headerLinks" finished-at="2025-09-05T17:24:24 IST" duration-ms="2251" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Job Seeker]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.imejob.tests.navigation.HeaderNavigationTest2$$Lambda/0x0000022286119880@2bc12da]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[requestType=jobSeeker]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeaderNavigation -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:24 IST" name="close" finished-at="2025-09-05T17:24:24 IST" duration-ms="291" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:24 IST" name="start" finished-at="2025-09-05T17:24:26 IST" duration-ms="1222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="verifyHeaderNavigation(java.lang.String,java.lang.Runnable,java.lang.String)[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:26 IST" name="verifyHeaderNavigation" data-provider="headerLinks" finished-at="2025-09-05T17:24:28 IST" duration-ms="2296" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Employer]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[com.imejob.tests.navigation.HeaderNavigationTest2$$Lambda/0x0000022286119aa0@3241713e]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[requestType=employer]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeaderNavigation -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.navigation.HeaderNavigationTest2@34e9fd99]" started-at="2025-09-05T17:24:28 IST" name="close" finished-at="2025-09-05T17:24:28 IST" duration-ms="308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- com.imejob.tests.navigation.HeaderNavigationTest2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
