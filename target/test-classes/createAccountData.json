@@ -1,0 +1,16 @@
+{
+  "createAccount": {
+    "firstName": "Mohammed",
+    "middleName": "Sumair",
+    "lastName": "Khan",
+    "email": "sumairk0777@gmail.com",
+    "phoneNumber": "9916358557",
+    "totalExperience": "0",
+    "currentLocation": "Bangalore",
+    "password": "Sumair@1",
+    "gender": "Male",
+    "technicalSkills": "Java, Selenium",
+    "resumePath": "D:\\eclipse\\ImeJob_Automation_Suite\\resume\\Mohammed_Sumair_Khan_Resume.pdf",
+    "agreeTerms": true
+  }
+}
