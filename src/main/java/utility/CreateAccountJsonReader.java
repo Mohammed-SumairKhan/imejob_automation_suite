@@ -47,4 +47,20 @@ public class CreateAccountJsonReader {
 		}
 		return tempNode != null ? tempNode.asText() : null; // Return value or null if not found
 	}
+	
+	/**
+	 * Retrieves a value from the loaded JSON using one or more nested keys.
+	 * 
+	 * @param keys
+	 * @return
+	 */
+	 public JsonNode getJsonNode(String... keys) {
+	        JsonNode tempNode = jsonNode;
+	        for (String key : keys) {
+	            if (tempNode != null) {
+	                tempNode = tempNode.get(key);
+	            }
+	        }
+	        return tempNode;
+	    }
 }
