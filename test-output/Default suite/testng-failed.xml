@@ -6,8 +6,8 @@
       <class name="com.imejob.tests.functional.JobSeekerAuthTest">
         <methods>
           <include name="close"/>
+          <include name="navigateToCreateAccountTest"/>
           <include name="start"/>
-          <include name="createAccountTest"/>
         </methods>
       </class> <!-- com.imejob.tests.functional.JobSeekerAuthTest -->
     </classes>
