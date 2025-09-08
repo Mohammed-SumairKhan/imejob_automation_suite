@@ -34,7 +34,7 @@ imejob_automation_suite/
 ├── test/
 │   └── (unit and integration tests)
 │
-├── pom.xml (if using Maven)
+├── pom.xml
 ├── README.md
 └── .gitignore
 ```
