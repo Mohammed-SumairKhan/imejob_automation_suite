@@ -6,13 +6,13 @@ import org.testng.annotations.DataProvider;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
-import utility.CreateAccountJsonReader;
+import utility.JsonReader;
 
 public class CreateAccountJsonDataProvider {
 	
 	@DataProvider(name = "getCreateAccountData")
     public static Object[][] getCreateAccountData() {
-        CreateAccountJsonReader reader = new CreateAccountJsonReader();
+        JsonReader reader = new JsonReader();
         reader.loadJson("createAccountData"); // JSON file name without .json
 
         // Get technicalSkills as array

@@ -13,7 +13,7 @@ import com.imejob.pages.HeaderNavigationPage;
 import com.imejob.pages.JobSeekerAuthPage;
 
 import driverproperties.BrowserHandler;
-import utility.CreateAccountJsonReader;
+import utility.JsonReader;
 import utility.PropertiesReader;
 import utility.WaitUtils;
 
@@ -28,7 +28,7 @@ public class JobSeekerAuthTest {
 	PropertiesReader propertiesReader;
 	HeaderNavigationPage headerNavigationPage;
 	JobSeekerAuthPage jobSeekerAuthPage;
-	CreateAccountJsonReader createAccountJsonReader;
+	JsonReader createAccountJsonReader;
 
 	/**
 	 * Setup method that runs before each test.
@@ -48,7 +48,7 @@ public class JobSeekerAuthTest {
 		jobSeekerAuthPage = new JobSeekerAuthPage(driver);
 
 		// load JSON test data
-		createAccountJsonReader = new CreateAccountJsonReader();
+		createAccountJsonReader = new JsonReader();
 		createAccountJsonReader.loadJson("createAccountData");
 	}
 

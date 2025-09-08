@@ -1,10 +1,10 @@
 package com.imejob.utility;
 
-import utility.CreateAccountJsonReader;
+import utility.JsonReader;
 
 public class Demo {
 		public static void main(String[] args) {
-			CreateAccountJsonReader createAccountJsonReader = new CreateAccountJsonReader();
+			JsonReader createAccountJsonReader = new JsonReader();
 			createAccountJsonReader.loadJson("createAccountData");
 			System.out.println(createAccountJsonReader.getValue("createAccount" ,"firstName"));
 			System.out.println(createAccountJsonReader.getValue("createAccount" ,"middleName"));
