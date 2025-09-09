@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utility.WaitUtils;
+
 /**
  * Page Object class representing the Employer Authentication page
  * on imejob.com. 
@@ -54,6 +56,7 @@ public class EmployerAuthPage {
      */
     public void navigateToCreateAccount() {
         employerButton.click();
+        WaitUtils.waitForElementClickable(driver, createAccountLink);
         createAccountLink.click();
     }
 
@@ -63,6 +66,7 @@ public class EmployerAuthPage {
      */
     public void navigateToSignIn() {
         employerButton.click();
+        WaitUtils.waitForElementClickable(driver, signInLink);
         signInLink.click();
     }
 
@@ -72,6 +76,7 @@ public class EmployerAuthPage {
      */
     public void navigateToForgotPassword() {
         employerButton.click();
+        WaitUtils.waitForElementClickable(driver, forgotPasswordLink);
         forgotPasswordLink.click();
     }
 
@@ -82,7 +87,9 @@ public class EmployerAuthPage {
      */
     public void navigateToLogin() {
         employerButton.click();
+        WaitUtils.waitForElementClickable(driver, forgotPasswordLink);
         forgotPasswordLink.click();
+        WaitUtils.waitForElementClickable(driver, loginLink);
         loginLink.click();
     }
 }

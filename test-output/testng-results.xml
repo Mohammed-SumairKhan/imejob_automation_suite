@@ -1,42 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
+<testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-08T14:46:26 IST" name="Default suite" finished-at="2025-09-08T14:46:47 IST" duration-ms="21540">
+  <suite started-at="2025-09-09T15:46:51 IST" name="Default suite" finished-at="2025-09-09T15:46:55 IST" duration-ms="3977">
     <groups>
     </groups>
-    <test started-at="2025-09-08T14:46:26 IST" name="Default test" finished-at="2025-09-08T14:46:47 IST" duration-ms="21540">
-      <class name="com.imejob.tests.functional.JobSeekerSignInTest">
-        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.functional.JobSeekerSignInTest@2d1ef81a]" started-at="2025-09-08T14:46:26 IST" name="start" finished-at="2025-09-08T14:46:37 IST" duration-ms="11204" status="PASS">
+    <test started-at="2025-09-09T15:46:51 IST" name="Default test" finished-at="2025-09-09T15:46:55 IST" duration-ms="3977">
+      <class name="com.imejob.tests.functional.EmployerAuthTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.EmployerAuthTest@1d296da]" started-at="2025-09-09T15:46:51 IST" name="setUp" finished-at="2025-09-09T15:46:54 IST" duration-ms="3041" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- start -->
-        <test-method signature="signInTest(java.lang.String,java.lang.String)[pri:1, instance:com.imejob.tests.functional.JobSeekerSignInTest@2d1ef81a]" started-at="2025-09-08T14:46:37 IST" name="signInTest" data-provider="signInData" finished-at="2025-09-08T14:46:47 IST" duration-ms="9946" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[sumair@123]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Sumair@123]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyNavigateToCreateAccount()[pri:1, instance:com.imejob.tests.functional.EmployerAuthTest@1d296da]" started-at="2025-09-09T15:46:54 IST" name="verifyNavigateToCreateAccount" finished-at="2025-09-09T15:46:54 IST" duration-ms="710" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [https://sso.imejob.com/auth/login?callback=https%3A%2F%2Fimejob.com%2Fauth%2Fcallback%3FcontinueUri%3D%2Fdashboard%2Fjob-seeker%2Fapplications&requestType=jobSeeker] but found [https://imejob.com/dashboard/job-seeker/applications]]]>
+              <![CDATA[Create Account page not opened! expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [https://sso.imejob.com/auth/login?callback=https%3A%2F%2Fimejob.com%2Fauth%2Fcallback%3FcontinueUri%3D%2Fdashboard%2Fjob-seeker%2Fapplications&requestType=jobSeeker] but found [https://imejob.com/dashboard/job-seeker/applications]
+              <![CDATA[java.lang.AssertionError: Create Account page not opened! expected [true] but found [false]
 at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at org.testng.Assert.assertEquals(Assert.java:666)
-at com.imejob.tests.functional.JobSeekerSignInTest.signInTest(JobSeekerSignInTest.java:48)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at com.imejob.tests.functional.EmployerAuthTest.verifyNavigateToCreateAccount(EmployerAuthTest.java:34)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -68,12 +53,12 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signInTest -->
-        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.functional.JobSeekerSignInTest@2d1ef81a]" started-at="2025-09-08T14:46:47 IST" name="close" finished-at="2025-09-08T14:46:47 IST" duration-ms="192" status="PASS">
+        </test-method> <!-- verifyNavigateToCreateAccount -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.EmployerAuthTest@1d296da]" started-at="2025-09-09T15:46:54 IST" name="tearDown" finished-at="2025-09-09T15:46:55 IST" duration-ms="191" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- com.imejob.tests.functional.JobSeekerSignInTest -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.imejob.tests.functional.EmployerAuthTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.imejob.tests.functional.JobSeekerSignInTest">
+      <class name="com.imejob.tests.functional.EmployerAuthTest">
         <methods>
-          <include name="start"/>
-          <include name="signInTest" invocation-numbers="0"/>
-          <include name="close"/>
+          <include name="verifyNavigateToCreateAccount"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.imejob.tests.functional.JobSeekerSignInTest -->
+      </class> <!-- com.imejob.tests.functional.EmployerAuthTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

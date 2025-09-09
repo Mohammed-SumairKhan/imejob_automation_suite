@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\DELL\AppData\Local\Temp\testng-eclipse-304232083\testng-customsuite.xml</span>
+                    <span>C:\Users\DELL\AppData\Local\Temp\testng-eclipse-498368298\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.imejob.tests.functional.JobSeekerSignInTest" class="method navigator-link" hash-for-method="signInTest(sumair@123, Sumair@123)">signInTest(sumair@123, Sumair@123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.imejob.tests.functional.EmployerAuthTest" class="method navigator-link" hash-for-method="verifyNavigateToCreateAccount">verifyNavigateToCreateAccount</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,23 +121,19 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.imejob.tests.functional.JobSeekerSignInTest</span>
+              <span class="class-name">com.imejob.tests.functional.EmployerAuthTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="signInTest(sumair@123, Sumair@123)">
-                  </a> <!-- signInTest(sumair@123, Sumair@123) -->
-                  <span class="method-name">signInTest</span>
-                  <span class="parameters">(sumair@123,Sumair@123)</span>
-                  <div class="stack-trace">java.lang.AssertionError: expected [https://sso.imejob.com/auth/login?callback=https%3A%2F%2Fimejob.com%2Fauth%2Fcallback%3FcontinueUri%3D%2Fdashboard%2Fjob-seeker%2Fapplications&amp;requestType=jobSeeker] but found [https://imejob.com/dashboard/job-seeker/applications]
+                  <a name="verifyNavigateToCreateAccount">
+                  </a> <!-- verifyNavigateToCreateAccount -->
+                  <span class="method-name">verifyNavigateToCreateAccount</span>
+                  <div class="stack-trace">java.lang.AssertionError: Create Account page not opened! expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at org.testng.Assert.assertEquals(Assert.java:666)
-	at com.imejob.tests.functional.JobSeekerSignInTest.signInTest(JobSeekerSignInTest.java:48)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.imejob.tests.functional.EmployerAuthTest.verifyNavigateToCreateAccount(EmployerAuthTest.java:34)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -173,7 +169,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\DELL\AppData\Local\Temp\testng-eclipse-304232083\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\DELL\AppData\Local\Temp\testng-eclipse-498368298\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -182,11 +178,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.imejob.tests.functional.JobSeekerSignInTest&quot;&gt;
+      &lt;class name=&quot;com.imejob.tests.functional.EmployerAuthTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;signInTest&quot;/&gt;
+          &lt;include name=&quot;verifyNavigateToCreateAccount&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.imejob.tests.functional.JobSeekerSignInTest --&gt;
+      &lt;/class&gt; &lt;!-- com.imejob.tests.functional.EmployerAuthTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -228,14 +224,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'signInTest')
-data.setCell(0, 2, 'com.imejob.tests.functional.JobSeekerSignInTest')
-data.setCell(0, 3, 9946);
+data.setCell(0, 1, 'verifyNavigateToCreateAccount')
+data.setCell(0, 2, 'com.imejob.tests.functional.EmployerAuthTest')
+data.setCell(0, 3, 710);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 710 ms</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -250,15 +246,17 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.imejob.tests.functional.JobSeekerSignInTest</span>
+              <span class="ignored-class-name">com.imejob.tests.functional.EmployerAuthTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">forgetPassNavigation</span>
+                <span class="ignored-method-name">verifyNavigateToForgotPassword</span>
                 <br/>
-                <span class="ignored-method-name">loginNavigation</span>
+                <span class="ignored-method-name">verifyNavigateToSignIn</span>
+                <br/>
+                <span class="ignored-method-name">verifyNavigateToLogin</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -270,20 +268,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.imejob.tests.functional.JobSeekerSignInTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.imejob.tests.functional.EmployerAuthTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">start</span>
+                <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">signInTest(sumair@123, Sumair@123)</span>
-                <span class="method-start">11204 ms</span>
+                <span class="method-name">verifyNavigateToCreateAccount</span>
+                <span class="method-start">3041 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">close</span>
-                <span class="method-start">21154 ms</span>
+                <span class="method-name">tearDown</span>
+                <span class="method-start">3753 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
