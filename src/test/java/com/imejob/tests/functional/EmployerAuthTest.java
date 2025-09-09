@@ -1,7 +1,6 @@
 package com.imejob.tests.functional;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,60 +12,93 @@ import driverproperties.BrowserHandler;
 import utility.PropertiesReader;
 import utility.WaitUtils;
 
+/**
+ * Functional test class for validating navigation flow in Employer
+ * Authentication pages: - Create Account - Sign In - Forgot Password - Login
+ * 
+ * Uses TestNG framework with BrowserHandler, PropertiesReader, and WaitUtils
+ * for setup, configuration, and waits.
+ */
 public class EmployerAuthTest {
-	 WebDriver driver;
-	 EmployerAuthPage employerAuthPage;
-	 PropertiesReader propertiesReader;
 
-	    @BeforeMethod
-	    public void setUp() {
-	    	propertiesReader = new PropertiesReader();
-	    	driver = BrowserHandler.getBrowser(propertiesReader.getBrowserName());
-	    	driver.get(propertiesReader.getUrl());
-	        employerAuthPage = new EmployerAuthPage(driver);
-	        WaitUtils.implicitWait(driver);
-	    }
+	// WebDriver instance to control the browser
+	WebDriver driver; // Selenium driver
 
-	    @Test(priority = 1)
-	    public void verifyNavigateToCreateAccount() {
-	        employerAuthPage.navigateToCreateAccount();
-	        // Example: check if URL or page title contains "register"
-	        Assert.assertTrue(driver.getCurrentUrl().contains("register") 
-	                          || driver.getTitle().contains("Create Account"),
-	                          "Create Account page not opened!");
-	    }
+	// Page Object for Employer Authentication page
+	EmployerAuthPage employerAuthPage; // POM class reference
 
-	    @Test(priority = 2)
-	    public void verifyNavigateToSignIn() {
-	        employerAuthPage.navigateToSignIn();
-	        // Example: check if URL or page title contains "login" or "sign-in"
-	        Assert.assertTrue(driver.getCurrentUrl().contains("login") 
-	                          || driver.getTitle().contains("Sign In"),
-	                          "Sign In page not opened!");
-	    }
+	// Utility to read config properties (browser, url, etc.)
+	PropertiesReader propertiesReader; // Config reader
 
-	    @Test(priority = 3)
-	    public void verifyNavigateToForgotPassword() {
-	        employerAuthPage.navigateToForgotPassword();
-	        // Example: check if URL or page title contains "forgot"
-	        Assert.assertTrue(driver.getCurrentUrl().contains("forgot") 
-	                          || driver.getTitle().contains("Forgot"),
-	                          "Forgot Password page not opened!");
-	    }
+	/**
+	 * Setup method executed before each test. Initializes driver, loads URL, and
+	 * prepares page objects.
+	 */
+	@BeforeMethod
+	public void setUp() {
+		propertiesReader = new PropertiesReader(); // Load config properties
+		driver = BrowserHandler.getBrowser(propertiesReader.getBrowserName()); // Launch browser
+		driver.get(propertiesReader.getUrl()); // Navigate to base URL
+		employerAuthPage = new EmployerAuthPage(driver); // Initialize page object
+		WaitUtils.implicitWait(driver); // Apply implicit wait
+	}
 
-	    @Test(priority = 4)
-	    public void verifyNavigateToLogin() {
-	        employerAuthPage.navigateToLogin();
-	        // Example: check if URL or page title contains "login"
-	        Assert.assertTrue(driver.getCurrentUrl().contains("login") 
-	                          || driver.getTitle().contains("Login"),
-	                          "Login page not opened!");
-	    }
+	/**
+	 * Test: Navigate to "Create Account" page. Verifies redirection URL after
+	 * clicking Employer → Create Account.
+	 */
+	@Test(priority = 1)
+	public void verifyNavigateToCreateAccount() {
+		employerAuthPage.navigateToCreateAccount(); // Action
+		WaitUtils.waitUntilUrlContains(driver, "auth/register?"); // Explicit wait
+		Assert.assertTrue(driver.getCurrentUrl().contains("auth/register?"), // Assertion
+				"Failed: Create Account page not opened.");
+	}
 
-	    @AfterMethod
-	    public void tearDown() {
-	        if (driver != null) {
-	            driver.quit();
-	        }
-	    }
+	/**
+	 * Test: Navigate to "Sign In" page. Verifies redirection URL after clicking
+	 * Employer → Sign In.
+	 */
+	@Test(priority = 2)
+	public void verifyNavigateToSignIn() {
+		employerAuthPage.navigateToSignIn(); // Action
+		WaitUtils.waitUntilUrlContains(driver, "auth/login?"); // Explicit wait
+		Assert.assertTrue(driver.getCurrentUrl().contains("auth/login?"), // Assertion
+				"Failed: Sign In page not opened.");
+	}
+
+	/**
+	 * Test: Navigate to "Forgot Password" page. Verifies redirection URL after
+	 * clicking Employer → Forgot Password.
+	 */
+	@Test(priority = 3)
+	public void verifyNavigateToForgotPassword() {
+		employerAuthPage.navigateToForgotPassword(); // Action
+		WaitUtils.waitUntilUrlContains(driver, "auth/forgot-password?"); // Explicit wait
+		Assert.assertTrue(driver.getCurrentUrl().contains("auth/forgot-password?"), // Assertion
+				"Failed: Forgot Password page not opened.");
+	}
+
+	/**
+	 * Test: Navigate to "Login" page. Verifies redirection URL after clicking
+	 * Employer → Login.
+	 */
+	@Test(priority = 4)
+	public void verifyNavigateToLogin() {
+		employerAuthPage.navigateToLogin(); // Action
+		WaitUtils.waitUntilUrlContains(driver, "auth/login?"); // Explicit wait
+		Assert.assertTrue(driver.getCurrentUrl().contains("auth/login?"), // Assertion
+				"Failed: Login page not opened.");
+	}
+
+	/**
+	 * Cleanup method executed after each test. Closes browser if driver is not
+	 * null.
+	 */
+	@AfterMethod
+	public void tearDown() {
+		if (driver != null) { // Check if driver is initialized
+			driver.quit(); // Close browser
+		}
+	}
 }

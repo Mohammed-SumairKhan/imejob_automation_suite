@@ -5,8 +5,9 @@
     <classes>
       <class name="com.imejob.tests.functional.EmployerAuthTest">
         <methods>
-          <include name="verifyNavigateToCreateAccount"/>
+          <include name="verifyNavigateToForgotPassword"/>
           <include name="tearDown"/>
+          <include name="verifyNavigateToLogin"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.imejob.tests.functional.EmployerAuthTest -->
