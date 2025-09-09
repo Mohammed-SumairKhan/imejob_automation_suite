@@ -110,7 +110,9 @@ public class HeaderNavigationTest {
 		TestNavigationHelper.verifyNavigation(driver, () -> headerNavigationPage.clickEmployer(), // Click action passed as lambda
 				"requestType=employer"); // Expected URL substring
 	}
-
+	/**
+	 * quits the driver
+	 */
 	@AfterMethod
 	public void close() {
 		driver.quit(); // Quit browser
