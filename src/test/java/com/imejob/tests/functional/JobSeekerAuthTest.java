@@ -82,7 +82,7 @@ public class JobSeekerAuthTest {
 	 * @param agreeTerms      - checkbox flag for terms agreement
 	 */
 	@Test(priority = 2, dependsOnMethods = "navigateToCreateAccountTest", dataProvider = "getCreateAccountData", 
-			dataProviderClass = com.imejob.utility.CreateAccountJsonDataProvider.class)
+			dataProviderClass = com.imejob.dataprovider.CreateAccountJsonDataProvider.class)
 	public void createAccountTest(String firstName, String middleName, String lastName, String email, String phone,
 			String totalExperience, String location, String password, String gender, String[] skillsArray,
 			String resumePath, boolean agreeTerms) {

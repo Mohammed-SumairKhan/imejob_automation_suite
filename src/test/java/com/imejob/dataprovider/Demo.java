@@ -1,4 +1,4 @@
-package com.imejob.utility;
+package com.imejob.dataprovider;
 
 import utility.JsonReader;
 

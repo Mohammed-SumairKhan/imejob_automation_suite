@@ -9,8 +9,8 @@ import org.testng.annotations.Test;
 
 import com.imejob.pages.JobSeekerSignInPage;
 
-import dataproviders.SignInDataProvider;
 import driverproperties.BrowserHandler;
+import helper.SignInDataProvider;
 import utility.JsonReader;
 import utility.PropertiesReader;
 import utility.WaitUtils;

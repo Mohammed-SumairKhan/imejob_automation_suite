@@ -72,9 +72,7 @@ public class HomePageNavigationTest {
         }
 
         // Verify URL contains WhatsApp link
-        String currentUrl = driver.getCurrentUrl(); 
-        Assert.assertTrue(currentUrl.contains("wa.me") || currentUrl.contains("api.whatsapp.com"),
-                "WhatsApp link did not open correctly!");
+        Assert.assertTrue(driver.getCurrentUrl().contains("wa.me"));
 
         // Close new tab and switch back to main window
         driver.close();

@@ -6,8 +6,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.imejob.dataprovider.TestNavigationHelper;
 import com.imejob.pages.HeaderNavigationPage;
-import com.imejob.utility.TestNavigationHelper;
 
 import driverproperties.BrowserHandler;
 import utility.PropertiesReader;

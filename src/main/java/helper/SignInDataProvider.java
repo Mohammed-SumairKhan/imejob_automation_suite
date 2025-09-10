@@ -1,4 +1,4 @@
-package dataproviders;
+package helper;
 
 import utility.JsonReader;
 
