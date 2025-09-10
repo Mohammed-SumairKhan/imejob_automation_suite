@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.imejob.tests.navigation.HomePageNavigation">
+      <class name="com.imejob.tests.functional.SearchTest">
         <methods>
-          <include name="start"/>
-          <include name="ViewAllJobNavTesst"/>
+          <include name="verifyJobsBySkillAndLocation"/>
           <include name="close"/>
+          <include name="start"/>
         </methods>
-      </class> <!-- com.imejob.tests.navigation.HomePageNavigation -->
+      </class> <!-- com.imejob.tests.functional.SearchTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

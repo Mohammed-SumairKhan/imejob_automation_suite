@@ -1,0 +1,34 @@
+{
+  "positiveTests": {
+    "skillAndLocation": {
+      "skill": "Java",
+      "location": "Bangalore"
+    },
+    "skillOnly": {
+      "skill": "Java"
+    },
+    "multipleSkills": {
+      "skills": ["Java", "Selenium"],
+      "location": "Bangalore"
+    },
+    "caseInsensitive": {
+      "skill": "java",
+      "location": "bangalore"
+    },
+    "specialCharsWhitespace": {
+      "skill": "Java ",
+      "location": "Bangalore@"
+    }
+  },
+  "negativeTests": {
+    "invalidSkillAndLocation": {
+      "skill": "ABCXYZ",
+      "location": "Mars"
+    }
+  },
+  "validationMessages": {
+    "emptySearch": "Please enter search keywords to find relevant jobs",
+    "locationWithoutSkill": "Please enter search keywords to find relevant jobs",
+    "noJobsFound": "No jobs found"
+  }
+}
