@@ -57,7 +57,7 @@ public class HomePageNavigationTest {
      * Test to verify WhatsApp icon click opens the correct WhatsApp link in a new tab
      */
     @Test(priority = 2)
-    public void testClickWhatsAppIcon() {
+    public void clickWhatsAppIconTest() {
         String mainWindow = driver.getWindowHandle(); // Store the current main window handle
 
         homePage.clickWhatsAppIcon(); // Click WhatsApp icon

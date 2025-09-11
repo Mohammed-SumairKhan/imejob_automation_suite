@@ -8,6 +8,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utility.WaitUtils;
+
 /**
  * Page Object class representing the Job Cards section on the Home Page.
  * Contains methods to interact with job cards, retrieve their text, and click them.
@@ -20,7 +22,14 @@ public class JobCardsPage {
 
     @FindBy(xpath = "//div[contains(@class, 'Jobcard_jobTitle__LUngf')]")
     List<WebElement> jobCardsText; // Optional: List of job card title elements
-
+    
+    @FindBy(xpath = "//button[text() = 'Apply for this job']")
+    WebElement applyButton;
+    
+    @FindBy(xpath = "//button[text() = 'Login']")
+    WebElement loginButton;
+    
+    
     // Constructor initializes WebDriver and PageFactory elements
     public JobCardsPage(WebDriver driver) {
         this.driver = driver; // inline // assign driver to class variable
@@ -113,4 +122,23 @@ public class JobCardsPage {
         }
         return null; // inline // no cards found
     }
+    
+    public void clickOnApply() {
+        try {
+        	WaitUtils.waitForElementClickable(driver, applyButton);//explicit wait
+            applyButton.click(); // inline // attempt to click the apply button
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to click on Apply button", e); // inline // provide meaningful error if click fails
+        }
+    }
+    
+    public void clickOnLogin() {
+        try {
+        	WaitUtils.waitForElementClickable(driver, loginButton);//explicit wait
+            loginButton.click(); // inline // attempt to click the apply button
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to click on Apply button", e); // inline // provide meaningful error if click fails
+        }
+    }
+    
 }
