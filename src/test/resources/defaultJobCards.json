@@ -1,0 +1,18 @@
+{
+  "defaultJobCards": {
+    "firstCard": {
+      "jobTitle": "Flutter Developer",
+      "companyName": "Levon Consulting",
+      "location": "Bangalore",
+      "skills": ["Flutter"],
+      "url": "flutter-developer"
+    },
+    "lastCard": {
+      "jobTitle": "SharePoint Developer",
+      "companyName": "Stride consultant",
+      "location": "Pune",
+      "skills": ["SharePoint", "Power Automate Flow", "Power Platform"],
+      "url": "sharepoint-developer"
+    }
+  }
+}
