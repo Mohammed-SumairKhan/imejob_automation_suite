@@ -1,0 +1,26 @@
+{
+  "defaultJobCards": {
+    "firstCard": {
+      "jobTitle": "ruby on rails",
+      "companyName": "hi hi pvt ltd",
+      "location": "Delhi",
+      "skills": ["C#"],
+      "url": "ruby-on-rails"
+    },
+    "lastCard": {
+      "jobTitle": "QA Automation Lead",
+      "companyName": "Divum Corporate Services Pvt Ltd",
+      "location": "Bangalore",
+      "skills": ["software Test lead", "Software Testing", "Automation Testing"],
+      "url": "qa-automation-lead"
+    }
+  },
+  "jobCardActions": {
+    "loginButton": {
+      "url": "auth/login"
+    },
+    "applyButton": {
+      "successMessage": "Job applied successfully!"
+    }
+  }
+}
