@@ -61,6 +61,6 @@ public class JsonReader {
 	                tempNode = tempNode.get(key);
 	            }
 	        }
-	        return tempNode;
+	        return tempNode; // keep raw JsonNode for advanced handling 
 	    }
 }
