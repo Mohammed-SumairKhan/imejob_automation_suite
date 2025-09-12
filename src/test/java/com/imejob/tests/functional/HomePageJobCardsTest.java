@@ -152,6 +152,10 @@ public class HomePageJobCardsTest {
 		Assert.assertTrue(driver.getCurrentUrl().contains(expectedLoginUrl),
 				"Login button did not redirect to expected login page"); // Validate URL
 	}
+	
+	
+	
+	
 
 	/**
 	 * Tear down method executed after each test. Closes browser if driver is

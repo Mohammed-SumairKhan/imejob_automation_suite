@@ -2,80 +2,80 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-11T20:46:55 IST" name="Default suite" finished-at="2025-09-11T20:47:12 IST" duration-ms="16900">
+  <suite started-at="2025-09-12T18:35:51 IST" name="Default suite" finished-at="2025-09-12T18:36:35 IST" duration-ms="43826">
     <groups>
     </groups>
-    <test started-at="2025-09-11T20:46:55 IST" name="Default test" finished-at="2025-09-11T20:47:12 IST" duration-ms="16900">
+    <test started-at="2025-09-12T18:35:51 IST" name="Default test" finished-at="2025-09-12T18:36:35 IST" duration-ms="43826">
       <class name="com.imejob.tests.functional.HomePageJobCardsTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:46:55 IST" name="setUp" finished-at="2025-09-11T20:46:58 IST" duration-ms="3234" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:35:51 IST" name="setUp" finished-at="2025-09-12T18:35:59 IST" duration-ms="7519" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyDefaultJobCardsCount()[pri:1, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:46:58 IST" name="verifyDefaultJobCardsCount" finished-at="2025-09-11T20:46:58 IST" duration-ms="22" status="PASS">
+        <test-method signature="verifyDefaultJobCardsCount()[pri:1, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:35:59 IST" name="verifyDefaultJobCardsCount" finished-at="2025-09-12T18:35:59 IST" duration-ms="67" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDefaultJobCardsCount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:46:58 IST" name="tearDown" finished-at="2025-09-11T20:46:58 IST" duration-ms="156" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:35:59 IST" name="tearDown" finished-at="2025-09-12T18:36:02 IST" duration-ms="2853" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:46:58 IST" name="setUp" finished-at="2025-09-11T20:46:59 IST" duration-ms="819" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:02 IST" name="setUp" finished-at="2025-09-12T18:36:08 IST" duration-ms="5729" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyDefaultJobCardTextIsNotEmpty()[pri:2, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:46:59 IST" name="verifyDefaultJobCardTextIsNotEmpty" finished-at="2025-09-11T20:47:00 IST" duration-ms="1318" status="PASS">
+        <test-method signature="verifyDefaultJobCardTextIsNotEmpty()[pri:2, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:08 IST" name="verifyDefaultJobCardTextIsNotEmpty" finished-at="2025-09-12T18:36:08 IST" duration-ms="884" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyDefaultJobCardTextIsNotEmpty -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:47:00 IST" name="tearDown" finished-at="2025-09-11T20:47:01 IST" duration-ms="138" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:08 IST" name="tearDown" finished-at="2025-09-12T18:36:09 IST" duration-ms="725" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:47:01 IST" name="setUp" finished-at="2025-09-11T20:47:01 IST" duration-ms="840" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:09 IST" name="setUp" finished-at="2025-09-12T18:36:16 IST" duration-ms="7283" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testClickFirstCard()[pri:3, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:47:01 IST" name="testClickFirstCard" finished-at="2025-09-11T20:47:04 IST" duration-ms="2258" status="PASS">
+        <test-method signature="testClickFirstCard()[pri:3, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:16 IST" name="testClickFirstCard" finished-at="2025-09-12T18:36:17 IST" duration-ms="849" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickFirstCard -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:47:04 IST" name="tearDown" finished-at="2025-09-11T20:47:04 IST" duration-ms="183" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:17 IST" name="tearDown" finished-at="2025-09-12T18:36:18 IST" duration-ms="316" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:47:04 IST" name="setUp" finished-at="2025-09-11T20:47:06 IST" duration-ms="2092" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:18 IST" name="setUp" finished-at="2025-09-12T18:36:22 IST" duration-ms="4297" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testClickLastCard()[pri:4, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:47:06 IST" name="testClickLastCard" finished-at="2025-09-11T20:47:07 IST" duration-ms="629" status="PASS">
+        <test-method signature="testClickLastCard()[pri:4, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:22 IST" name="testClickLastCard" finished-at="2025-09-12T18:36:23 IST" duration-ms="783" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testClickLastCard -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:47:07 IST" name="tearDown" finished-at="2025-09-11T20:47:07 IST" duration-ms="159" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:23 IST" name="tearDown" finished-at="2025-09-12T18:36:23 IST" duration-ms="230" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:47:07 IST" name="setUp" finished-at="2025-09-11T20:47:08 IST" duration-ms="824" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:23 IST" name="setUp" finished-at="2025-09-12T18:36:26 IST" duration-ms="3543" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyFirstAndLastJobCardContainsRequiredFields()[pri:5, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:47:08 IST" name="verifyFirstAndLastJobCardContainsRequiredFields" finished-at="2025-09-11T20:47:08 IST" duration-ms="602" status="PASS">
+        <test-method signature="verifyFirstAndLastJobCardContainsRequiredFields()[pri:5, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:26 IST" name="verifyFirstAndLastJobCardContainsRequiredFields" finished-at="2025-09-12T18:36:27 IST" duration-ms="135" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyFirstAndLastJobCardContainsRequiredFields -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:47:08 IST" name="tearDown" finished-at="2025-09-11T20:47:08 IST" duration-ms="141" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:27 IST" name="tearDown" finished-at="2025-09-12T18:36:27 IST" duration-ms="328" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:47:08 IST" name="setUp" finished-at="2025-09-11T20:47:10 IST" duration-ms="2102" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:27 IST" name="setUp" finished-at="2025-09-12T18:36:32 IST" duration-ms="5334" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testLoginButtonRedirectsToLoginPage()[pri:6, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:47:10 IST" name="testLoginButtonRedirectsToLoginPage" finished-at="2025-09-11T20:47:12 IST" duration-ms="1186" status="PASS">
+        <test-method signature="testLoginButtonRedirectsToLoginPage()[pri:6, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:32 IST" name="testLoginButtonRedirectsToLoginPage" finished-at="2025-09-12T18:36:35 IST" duration-ms="2522" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoginButtonRedirectsToLoginPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-11T20:47:12 IST" name="tearDown" finished-at="2025-09-11T20:47:12 IST" duration-ms="145" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:35 IST" name="tearDown" finished-at="2025-09-12T18:36:35 IST" duration-ms="269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

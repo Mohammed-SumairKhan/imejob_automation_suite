@@ -1,0 +1,15 @@
+{
+  "personalInformation": {
+    "firstName": "Mohammed",
+    "middleName": "Sumair",
+    "lastName": "Khan",
+    "email": "sumairk0777@gmail.com",
+    "phoneNumber": "9916358557",
+    "experience": "0 year",
+    "location": "Bangalore",
+    "noticePeriod": "30 days",
+    "expectedCTC": "4 LPA",
+    "technicalSkills": ["Java", "Selenium", "SQL"],
+    "resume":"D:\\eclipse\\ImeJob_Automation_Suite\\resume\\Mohammed_Sumair_Khan_Resume.pdf"
+  }
+}
