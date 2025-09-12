@@ -1,5 +1,8 @@
 package com.imejob.tests.functional;
 
+import java.util.Arrays;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -32,7 +35,7 @@ public class HomePageJobCardsTest {
 	 */
 	@BeforeMethod
 	public void setUp() {
-		propertiesReader = new PropertiesReader(); // Load config properties
+		propertiesReader = new PropertiesReader(); // Load configuration properties
 		driver = BrowserHandler.getBrowser(propertiesReader.getBrowserName()); // Launch browser
 		driver.get(propertiesReader.getUrl()); // Navigate to base URL
 		jobCardsPage = new JobCardsPage(driver); // Initialize Page Object for job cards
@@ -46,8 +49,8 @@ public class HomePageJobCardsTest {
 	 */
 	@Test(priority = 1)
 	public void verifyDefaultJobCardsCount() {
-		int count = jobCardsPage.getDefaultJobCardsCount(); // fetch number of job cards
-		Assert.assertTrue(count > 0, "No default job cards are displayed on the Home Page"); // verify card count
+		int count = jobCardsPage.getDefaultJobCardsCount(); // Get number of job cards
+		Assert.assertTrue(count > 0, "No default job cards are displayed on the Home Page"); // Verify card count
 	}
 
 	/**
@@ -55,13 +58,13 @@ public class HomePageJobCardsTest {
 	 */
 	@Test(priority = 2)
 	public void verifyDefaultJobCardTextIsNotEmpty() {
-		int totalCards = jobCardsPage.getDefaultJobCardsCount(); // get total job cards
-		Assert.assertTrue(totalCards > 0, "No default job cards are displayed on the Home Page"); // fail if no cards
+		int totalCards = jobCardsPage.getDefaultJobCardsCount(); // Get total job cards
+		Assert.assertTrue(totalCards > 0, "No default job cards are displayed on the Home Page"); // Fail if no cards
 
 		for (int i = 0; i < totalCards; i++) {
-			String cardText = jobCardsPage.getJobCardTextByIndex(i); // get text of each card
-			Assert.assertNotNull(cardText, "Job card text is null for card index: " + i); // check null
-			Assert.assertFalse(cardText.trim().isEmpty(), "Job card text is empty for card index: " + i); // check empty string
+			String cardText = jobCardsPage.getJobCardTextByIndex(i); // Get text of each card
+			Assert.assertNotNull(cardText, "Job card text is null for card index: " + i); // Check null
+			Assert.assertFalse(cardText.trim().isEmpty(), "Job card text is empty for card index: " + i); // Check empty
 		}
 	}
 
@@ -73,10 +76,12 @@ public class HomePageJobCardsTest {
 	public void testClickFirstCard() {
 		jobCardsPage.clickFirstCard(); // Click the first job card
 
-		String expectedUrlPart = jsonReader.getValue("defaultJobCards", "firstCard", "url"); // Fetch expected URL from JSON
+		String expectedUrlPart = jsonReader.getValue("defaultJobCards", "firstCard", "url"); // Get expected URL from
+																								// JSON
 		WaitUtils.waitUntilUrlContains(driver, expectedUrlPart); // Wait until URL contains expected part
 
-		Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrlPart), "First card URL mismatch"); // Verify navigation
+		Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrlPart), "First card URL mismatch"); // Verify
+																										// navigation
 	}
 
 	/**
@@ -87,10 +92,12 @@ public class HomePageJobCardsTest {
 	public void testClickLastCard() {
 		jobCardsPage.clickLastCard(); // Click the last job card
 
-		String expectedUrlPart = jsonReader.getValue("defaultJobCards", "lastCard", "url"); // Fetch expected URL from JSON
+		String expectedUrlPart = jsonReader.getValue("defaultJobCards", "lastCard", "url"); // Get expected URL from
+																							// JSON
 		WaitUtils.waitUntilUrlContains(driver, expectedUrlPart); // Wait until URL contains expected part
 
-		Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrlPart), "Last card URL mismatch"); // Verify navigation
+		Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrlPart), "Last card URL mismatch"); // Verify
+																										// navigation
 	}
 
 	/**
@@ -103,14 +110,15 @@ public class HomePageJobCardsTest {
 
 		// Verify static fields of first card
 		Assert.assertTrue(firstCardText.contains(jsonReader.getValue("defaultJobCards", "firstCard", "jobTitle")),
-				"First card missing Job Title"); // Verify job title
+				"First card missing Job Title"); // Check job title
 		Assert.assertTrue(firstCardText.contains(jsonReader.getValue("defaultJobCards", "firstCard", "companyName")),
-				"First card missing Company Name"); // Verify company
+				"First card missing Company Name"); // Check company name
 		Assert.assertTrue(firstCardText.contains(jsonReader.getValue("defaultJobCards", "firstCard", "location")),
-				"First card missing Location"); // Verify location
+				"First card missing Location"); // Check location
 
 		// Verify all skill tags of first card
-		JsonNode firstCardSkills = jsonReader.getJsonNode("defaultJobCards", "firstCard", "skills"); // Fetch skill array from JSON
+		JsonNode firstCardSkills = jsonReader.getJsonNode("defaultJobCards", "firstCard", "skills"); // Fetch skills
+																										// array
 		for (JsonNode skill : firstCardSkills) {
 			Assert.assertTrue(firstCardText.toLowerCase().contains(skill.asText().toLowerCase()),
 					"First card missing skill: " + skill.asText()); // Check each skill
@@ -120,42 +128,66 @@ public class HomePageJobCardsTest {
 
 		// Verify static fields of last card
 		Assert.assertTrue(lastCardText.contains(jsonReader.getValue("defaultJobCards", "lastCard", "jobTitle")),
-				"Last card missing Job Title"); // Verify job title
+				"Last card missing Job Title"); // Check job title
 		Assert.assertTrue(lastCardText.contains(jsonReader.getValue("defaultJobCards", "lastCard", "companyName")),
-				"Last card missing Company Name"); // Verify company
+				"Last card missing Company Name"); // Check company name
 		Assert.assertTrue(lastCardText.contains(jsonReader.getValue("defaultJobCards", "lastCard", "location")),
-				"Last card missing Location"); // Verify location
+				"Last card missing Location"); // Check location
 
 		// Verify all skill tags of last card
-		JsonNode lastCardSkills = jsonReader.getJsonNode("defaultJobCards", "lastCard", "skills"); // Fetch skill array from JSON
+		JsonNode lastCardSkills = jsonReader.getJsonNode("defaultJobCards", "lastCard", "skills"); // Fetch skills array
 		for (JsonNode skill : lastCardSkills) {
 			Assert.assertTrue(lastCardText.toLowerCase().contains(skill.asText().toLowerCase()),
 					"Last card missing skill: " + skill.asText()); // Check each skill
 		}
 	}
-	
+
 	/**
-	 * Test to verify that the Login button on the job card redirects to the 
+	 * Test to verify that the Login button on the job card redirects to the
 	 * expected login page.
 	 */
 	@Test(priority = 6)
 	public void testLoginButtonRedirectsToLoginPage() {
-
 		jobCardsPage.clickFirstCard(); // Open first job card
 		jobCardsPage.clickOnApply(); // Click Apply button
 		jobCardsPage.clickOnLogin(); // Click Login button
 
-		String expectedLoginUrl = jsonReader.getValue("jobCardActions", "loginButton", "url"); // Read expected login URL from JSON
-
+		String expectedLoginUrl = jsonReader.getValue("jobCardActions", "loginButton", "url"); // Get expected login URL
+																								// from JSON
 		WaitUtils.waitUntilUrlContains(driver, expectedLoginUrl); // Wait for navigation
 
 		Assert.assertTrue(driver.getCurrentUrl().contains(expectedLoginUrl),
-				"Login button did not redirect to expected login page"); // Validate URL
+				"Login button did not redirect to expected login page"); // Verify URL
 	}
-	
-	
-	
-	
+
+	/**
+	 * Test to apply for a job using personal information Data Provider.
+	 */
+	@Test(priority = 7, dataProvider = "getPersonalInfoData", dataProviderClass = com.imejob.dataprovider.PersonalInformationDataProvider.class)
+	public void applyJob(String firstName, String middleName, String lastName, String email, String phone,
+			String experience, String location, String noticePeriod, String expectedCTC, String[] skillsArray,
+			boolean newResume, String resumePath) {
+
+		jobCardsPage.clickFirstCard(); // Click the first job card
+		jobCardsPage.clickOnApply(); // Click Apply button
+
+		List<String> skills = Arrays.asList(skillsArray); // Convert skills array to list
+		jobCardsPage.applyJob(firstName, middleName, lastName, email, phone, experience, location, noticePeriod,
+				expectedCTC, skills, newResume, resumePath); // Fill application form
+
+		jobCardsPage.clickSendApplication(); // Click Send Application button
+
+		String applicationMessage = jobCardsPage.getApplicationStatusMessage(); // Get application response message
+
+		// Assert based on the message content
+		if (applicationMessage.contains("Hurry!")) {
+			Assert.assertTrue(applicationMessage.contains("Hurry!"), "New application success message is displayed");
+		} else if (applicationMessage.contains("already applied")) {
+			Assert.assertTrue(applicationMessage.contains("already applied"), "Already applied message is displayed");
+		} else {
+			Assert.fail("Unexpected message displayed: " + applicationMessage);
+		}
+	}
 
 	/**
 	 * Tear down method executed after each test. Closes browser if driver is

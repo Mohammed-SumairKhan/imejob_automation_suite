@@ -5,11 +5,12 @@
     "lastName": "Khan",
     "email": "sumairk0777@gmail.com",
     "phoneNumber": "9916358557",
-    "experience": "0 year",
+    "experience": "0 Years",
     "location": "Bangalore",
-    "noticePeriod": "30 days",
-    "expectedCTC": "4 LPA",
+    "noticePeriod": "30 Days",
+    "expectedCTC": "4 Lakh INR",
     "technicalSkills": ["Java", "Selenium", "SQL"],
+    "newResume": false,
     "resume":"D:\\eclipse\\ImeJob_Automation_Suite\\resume\\Mohammed_Sumair_Khan_Resume.pdf"
   }
 }

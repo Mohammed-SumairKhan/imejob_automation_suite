@@ -7,9 +7,15 @@ import org.testng.annotations.DataProvider;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import utility.JsonReader;
-
+/**
+ * Reads Data From the createAccountData.json 
+ * And Create Data 
+ */
 public class CreateAccountJsonDataProvider {
-	
+	/**
+	 * Creates Data And
+	 * @return Data
+	 */
 	@DataProvider(name = "getCreateAccountData")
     public static Object[][] getCreateAccountData() {
         JsonReader reader = new JsonReader();

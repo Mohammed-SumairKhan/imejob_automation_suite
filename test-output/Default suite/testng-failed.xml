@@ -5,9 +5,9 @@
     <classes>
       <class name="com.imejob.tests.functional.HomePageJobCardsTest">
         <methods>
+          <include name="applyJob" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="testLoginButtonRedirectsToLoginPage"/>
         </methods>
       </class> <!-- com.imejob.tests.functional.HomePageJobCardsTest -->
     </classes>
