@@ -3,14 +3,15 @@
     "firstName": "Mohammed",
     "middleName": "Sumair",
     "lastName": "Khan",
-    "email": "sumairk0777@gmail.com",
-    "phoneNumber": "9916358557",
+    "email": "sumairk0@gmail.com",
+    "phoneNumber": "9976358557",
     "totalExperience": "0 Years",
     "currentLocation": "Bangalore",
     "password": "Sumair@1",
     "gender": "Male",
     "technicalSkills": ["Java", "Selenium", "Selenium WebDriver", "TestNG"],
     "resumePath": "D:\\eclipse\\ImeJob_Automation_Suite\\resume\\Mohammed_Sumair_Khan_Resume.pdf",
-    "agreeTerms": true
+    "agreeTerms": true,
+    "otp":"1234"
   }
 }
