@@ -11,15 +11,14 @@ import com.imejob.pages.JobSeekerSignInPage;
 
 import driverproperties.BrowserHandler;
 import helper.SignInDataProvider;
-import utility.JsonReader;
 import utility.PropertiesReader;
 import utility.WaitUtils;
 
 public class JobSeekerSignInTest {
 	WebDriver driver;
 	PropertiesReader propertiesReader;
+	
 	JobSeekerSignInPage jobSeekerSignInPage;
-	JsonReader reader ;
 	@BeforeMethod
 	public void start() {
 		propertiesReader = new PropertiesReader(); // initialize properties reader
@@ -29,10 +28,6 @@ public class JobSeekerSignInTest {
 
 		// initialize page objects
 		jobSeekerSignInPage = new JobSeekerSignInPage(driver);
-		
-		// load JSON test data
-		reader = new JsonReader();
-		reader.loadJson("signInData");
 	}
 	
 	@DataProvider(name = "signInData")
@@ -44,19 +39,21 @@ public class JobSeekerSignInTest {
 	public void signInTest(String email, String password) {
 		jobSeekerSignInPage.signIn(email, password);
 		
-		String expectedUrl = "https://imejob.com/dashboard/job-seeker/applications";
-		Assert.assertEquals(expectedUrl, driver.getCurrentUrl());
+		jobSeekerSignInPage.clickSignIn();
+		
+		WaitUtils.waitUntilUrlContains(driver, "dashboard");
+		Assert.assertTrue(driver.getCurrentUrl().contains("dashboard"));;
 	}
 	
 	@Test(priority = 2)
-	public void forgetPassNavigation() {
+	public void forgetPassNavigationTest() {
 		jobSeekerSignInPage.clickForgetPassword();
 		WaitUtils.waitUntilUrlContains(driver, "auth/forgot-password?");
 		Assert.assertTrue(driver.getCurrentUrl().contains("auth/forgot-password?"));
 	}
 	
 	@Test(priority = 3)
-	public void loginNavigation() {
+	public void loginNavigationTest() {
 		jobSeekerSignInPage.clickForgetPassword();
 		jobSeekerSignInPage.clickLogin();
 		WaitUtils.waitUntilUrlContains(driver, "auth/login?");

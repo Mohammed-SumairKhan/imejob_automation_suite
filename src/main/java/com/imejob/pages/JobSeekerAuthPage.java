@@ -11,47 +11,54 @@ import org.openqa.selenium.support.PageFactory;
 import utility.WaitUtils;
 
 /**
- * Page Object Model (POM) class for the Job Seeker Authentication Page.
+ * Page Object Model (POM) class for Job Seeker Authentication Page.
  * 
- * This class handles user registration workflows such as filling personal details,
- * selecting dropdown values, choosing skills, uploading a resume, accepting terms,
- * and clicking the register button.
+ * <p>This class manages the registration workflow for Job Seekers,
+ * including filling personal details, selecting dropdown values, choosing skills,
+ * uploading a resume, accepting terms, clicking register, handling OTP, 
+ * and validating registration messages.</p>
  */
 public class JobSeekerAuthPage {
 
-    private WebDriver driver; // WebDriver instance to interact with the browser
+    private WebDriver driver; // WebDriver instance for browser interactions
 
     // -------------------- Web Elements --------------------
 
     @FindBy(xpath = "//div[text() = 'New here?']/child::a")
-    private WebElement createAccountLink; // Link to navigate to the create account page
+    private WebElement createAccountLink; // Link to open registration form
 
     @FindBy(name = "firstName")
-    private WebElement firstNameInput; // Input field for first name
+    private WebElement firstNameInput; // Input for first name
 
     @FindBy(name = "middleName")
-    private WebElement middleNameInput; // Input field for middle name
+    private WebElement middleNameInput; // Input for middle name
 
     @FindBy(name = "lastName")
-    private WebElement lastNameInput; // Input field for last name
+    private WebElement lastNameInput; // Input for last name
 
     @FindBy(name = "email")
-    private WebElement emailInput; // Input field for email
+    private WebElement emailInput; // Input for email
 
     @FindBy(name = "phone")
-    private WebElement phoneInput; // Input field for phone number
+    private WebElement phoneInput; // Input for phone
 
     @FindBy(name = "password")
-    private WebElement passwordInput; // Input field for password
+    private WebElement passwordInput; // Input for password
 
     @FindBy(name = "acceptTerms")
-    private WebElement acceptTermsCheckbox; // Checkbox to accept terms and conditions
+    private WebElement acceptTermsCheckbox; // Checkbox for terms
 
     @FindBy(xpath = "//div[text() = 'Upload Resume']//input[@type ='file']")
-    private WebElement uploadResumeInput; // File upload input for resume
+    private WebElement uploadResumeInput; // Resume file input
 
     @FindBy(xpath = "//button[text() ='Register']")
-    private WebElement registerButton; // Button to register a new account
+    private WebElement registerButton; // Register button
+
+    @FindBy(xpath = "//div[@class ='my-10']//input")
+    private List<WebElement> otpInputs; // List of OTP input boxes
+
+    @FindBy(xpath = "//button[text() ='Verify & Proceed']")
+    private WebElement verifyAndProceedButton; // Button to verify OTP
 
     // -------------------- Constructor --------------------
 
@@ -62,60 +69,68 @@ public class JobSeekerAuthPage {
      */
     public JobSeekerAuthPage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(driver, this); // Initialize web elements
+        PageFactory.initElements(driver, this); // Initialize all @FindBy elements
     }
 
     // -------------------- Page Actions --------------------
 
     /**
-     * Clicks on the 'Create Account' link to open the registration form.
+     * Clicks the 'Create Account' link.
+     * Waits for visibility before clicking.
      */
     public void clickCreateAccount() {
-        By loc = By.xpath("//a[contains(text(),'Create an Account')]");
-        WaitUtils.waitForElementVisible(driver, loc); // Wait until link is visible
-        createAccountLink.click(); // Click the link
+        try {
+            createAccountLink.click(); // click safely
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to click 'Create Account' link: " + e.getMessage());
+        }
     }
 
     /**
      * Fills personal details in the registration form.
      *
-     * @param firstName User's first name
+     * @param firstName  User's first name
      * @param middleName User's middle name
-     * @param lastName User's last name
-     * @param email User's email
-     * @param phone User's phone number
-     * @param password User's password
+     * @param lastName   User's last name
+     * @param email      User's email
+     * @param phone      User's phone number
+     * @param password   User's password
      */
     public void fillPersonalDetails(String firstName, String middleName, String lastName,
                                     String email, String phone, String password) {
-        firstNameInput.sendKeys(firstName);   // Enter first name
-        middleNameInput.sendKeys(middleName); // Enter middle name
-        lastNameInput.sendKeys(lastName);     // Enter last name
-        emailInput.sendKeys(email);           // Enter email
-        phoneInput.sendKeys(phone);           // Enter phone number
-        passwordInput.sendKeys(password);     // Enter password
+        firstNameInput.sendKeys(firstName);   // enter first name
+        middleNameInput.sendKeys(middleName); // enter middle name
+        lastNameInput.sendKeys(lastName);     // enter last name
+        emailInput.sendKeys(email);           // enter email
+        phoneInput.sendKeys(phone);           // enter phone number
+        passwordInput.sendKeys(password);     // enter password
     }
 
     /**
      * Selects a value from a dropdown by index.
+     * Waits for the dropdown and option to be visible.
      *
      * @param index Dropdown index (0-based)
-     * @param value The value to select
+     * @param value Value to select
      */
     public void selectDropdownValue(int index, String value) {
-        By dropdownsLocator = By.xpath("//div[contains(@class , 'indicatorContainer')]");
-        WaitUtils.waitForAllElementsVisible(driver, dropdownsLocator); // Wait for dropdowns to be visible
+        try {
+            By dropdownsLocator = By.xpath("//div[contains(@class , 'indicatorContainer')]");
+            WaitUtils.waitForAllElementsVisible(driver, dropdownsLocator); // wait for all dropdowns
 
-        List<WebElement> dropdownArrows = driver.findElements(dropdownsLocator);
+            List<WebElement> dropdownArrows = driver.findElements(dropdownsLocator);
 
-        if (dropdownArrows.isEmpty() || index >= dropdownArrows.size()) {
-            throw new RuntimeException("Dropdown arrow not found at index: " + index);
+            if (dropdownArrows.isEmpty() || index >= dropdownArrows.size()) {
+                throw new RuntimeException("Dropdown arrow not found at index: " + index);
+            }
+
+            dropdownArrows.get(index).click(); // click dropdown
+            By option = By.xpath("//div[text()='" + value + "']");
+            WaitUtils.waitForElementVisible(driver, option); // wait for option
+            driver.findElement(option).click(); // select option
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to select dropdown value: " + e.getMessage());
         }
-
-        dropdownArrows.get(index).click(); // Click dropdown arrow
-        By option = By.xpath("//div[text()='" + value + "']");
-        WaitUtils.waitForElementVisible(driver, option); // Wait for option to be visible
-        driver.findElement(option).click(); // Click the option
     }
 
     /**
@@ -124,65 +139,68 @@ public class JobSeekerAuthPage {
      * @param skills List of skills to select
      */
     public void selectSkills(List<String> skills) {
-        By dropdownsLocator = By.xpath("//div[contains(@class , 'indicatorContainer')]");
-        WaitUtils.waitForAllElementsVisible(driver, dropdownsLocator); // Wait for all dropdowns
+        try {
+            By dropdownsLocator = By.xpath("//div[contains(@class , 'indicatorContainer')]");
+            WaitUtils.waitForAllElementsVisible(driver, dropdownsLocator);
 
-        List<WebElement> dropdownArrows = driver.findElements(dropdownsLocator);
+            List<WebElement> dropdownArrows = driver.findElements(dropdownsLocator);
+            if (dropdownArrows.size() <= 3) {
+                throw new RuntimeException("Skills dropdown arrow not found at index 3");
+            }
 
-        if (dropdownArrows.size() <= 3) {
-            throw new RuntimeException("Skills dropdown arrow not found at index 3");
-        }
-
-        // Select each skill from the dropdown
-        for (String skill : skills) {
-            dropdownArrows.get(3).click(); // Click the skills dropdown
-            By option = By.xpath("//div[text()='" + skill + "']");
-            WaitUtils.waitForElementVisible(driver, option); // Wait until skill option is visible
-            driver.findElement(option).click(); // Click the skill
+            for (String skill : skills) {
+                dropdownArrows.get(3).click(); // open skills dropdown
+                By option = By.xpath("//div[text()='" + skill + "']");
+                WaitUtils.waitForElementVisible(driver, option); // wait for skill
+                driver.findElement(option).click(); // select skill
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to select skills: " + e.getMessage());
         }
     }
 
     /**
      * Uploads a resume file.
      *
-     * @param filePath Path of the resume file
+     * @param filePath Path to the resume file
      */
     public void uploadResume(String filePath) {
-        uploadResumeInput.sendKeys(filePath); // Send file path to input
-    }
-
-    /**
-     * Accepts the terms and conditions if not already selected.
-     */
-    public void acceptTerms() {
-        if (!acceptTermsCheckbox.isSelected()) { // Check if already selected
-            acceptTermsCheckbox.click(); // Select checkbox
+        try {
+            uploadResumeInput.sendKeys(filePath); // upload file
+            // Wait until the uploaded resume is displayed on the UI
+            WaitUtils.waitForElementVisible(driver, By.xpath("//div[contains(text(), '.pdf')]"));
+        } catch (Exception e) {
+            throw new RuntimeException("Resume upload failed: " + e.getMessage());
         }
     }
 
     /**
-     * Clicks the Register button to submit the form.
+     * Accepts terms and conditions if not already selected.
      */
-    public void clickRegister() {
-        registerButton.click(); // Click register button
+    public void acceptTerms() {
+        try {
+            if (!acceptTermsCheckbox.isSelected()) {
+                acceptTermsCheckbox.click(); // select checkbox
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to accept terms: " + e.getMessage());
+        }
     }
 
     /**
-     * Creates a new account by filling in all required fields, selecting dropdowns,
+     * Clicks the 'Register' button to submit the form.
+     */
+    public void clickRegister() {
+        try {
+            registerButton.click(); // safely click register
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to click Register button: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Creates a new Job Seeker account by filling all fields, selecting dropdowns,
      * uploading resume, and accepting terms.
-     *
-     * @param firstName User's first name
-     * @param middleName User's middle name
-     * @param lastName User's last name
-     * @param email User's email
-     * @param phone User's phone number
-     * @param password User's password
-     * @param experience User's total experience
-     * @param location User's current location
-     * @param gender User's gender
-     * @param skills List of technical skills
-     * @param resumePath Path of resume file
-     * @param agreeTerms Whether to accept terms
      */
     public void createAccount(String firstName, String middleName, String lastName,
                               String email, String phone, String password,
@@ -190,14 +208,52 @@ public class JobSeekerAuthPage {
                               List<String> skills, String resumePath, boolean agreeTerms) {
 
         fillPersonalDetails(firstName, middleName, lastName, email, phone, password);
-
-        selectDropdownValue(0, experience); // Select experience dropdown
-        selectDropdownValue(1, location);   // Select location dropdown
-        selectDropdownValue(2, gender);     // Select gender dropdown
-        selectSkills(skills);               // Select skills
-
-        uploadResume(resumePath);           // Upload resume
-        if (agreeTerms) acceptTerms();      // Accept terms if required
+        selectDropdownValue(0, experience); // select experience
+        selectDropdownValue(1, location);   // select location
+        selectDropdownValue(2, gender);     // select gender
+        selectSkills(skills);               // select skills
+        uploadResume(resumePath);           // upload resume
+        if (agreeTerms) acceptTerms();      // accept terms
     }
 
+    /**
+     * Returns registration status message if email or phone is already used.
+     *
+     * @return String message or null
+     */
+    public String getRegisterStatusMessage() {
+        By messageLocator = By.xpath("//*[contains(text(),'Email address') or contains(text(),'Mobile number')]");
+        try {
+            List<WebElement> messages = driver.findElements(messageLocator);
+            return messages.isEmpty() ? null : messages.get(0).getText();
+        } catch (Exception e) {
+            return null; // ignore exception if element not found
+        }
+    }
+
+    /**
+     * Enters OTP into the separate input boxes.
+     *
+     * @param otp 4-digit OTP string
+     */
+    public void enterOTP(String otp) {
+        try {
+            for (int i = 0; i < otpInputs.size(); i++) {
+                otpInputs.get(i).sendKeys(String.valueOf(otp.charAt(i))); // enter each digit
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to enter OTP: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Clicks the 'Verify & Proceed' button after entering OTP.
+     */
+    public void clickVerifyAndProceed() {
+        try {
+            verifyAndProceedButton.click(); // safely click
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to click Verify & Proceed button: " + e.getMessage());
+        }
+    }
 }

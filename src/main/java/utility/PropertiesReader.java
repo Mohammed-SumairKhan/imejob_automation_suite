@@ -68,6 +68,10 @@ public class PropertiesReader {
     public int getExplicitWait() {
     	return Integer.parseInt(properties.getProperty("explicit"));
     }
+    
+    public String getJobSeekerDashboardUrl() {
+        return properties.getProperty("jobseeker-dashboard-url");  // Fetch base URL from config.properties
+    }
 }
 
 

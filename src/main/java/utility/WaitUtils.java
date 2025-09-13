@@ -74,7 +74,7 @@ public class WaitUtils {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(propertiesReader.getExplicitWait()));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
-	
+
 	/**
 	 * Wait until the All the Elements Are visible
 	 * 
@@ -82,8 +82,9 @@ public class WaitUtils {
 	 * @param locator
 	 * @param timeoutInSeconds
 	 */
-    public static void waitForAllElementsVisible(WebDriver driver, By locator) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(propertiesReader.getExplicitWait()));
-        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
-    }
+	public static void waitForAllElementsVisible(WebDriver driver, By locator) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(propertiesReader.getExplicitWait()));
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+	}
+
 }

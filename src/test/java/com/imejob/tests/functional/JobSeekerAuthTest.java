@@ -20,21 +20,25 @@ import utility.WaitUtils;
 /**
  * Functional test class for validating the Job Seeker account creation flow.
  * 
- * <p>This class covers navigation to the create account page and 
- * the full account registration process using data-driven testing.</p>
+ * <p>
+ * This class covers navigation to the create account page and the full account
+ * registration process using data-driven testing.
+ * </p>
  */
 public class JobSeekerAuthTest {
 	WebDriver driver;
 	PropertiesReader propertiesReader;
 	HeaderNavigationPage headerNavigationPage;
 	JobSeekerAuthPage jobSeekerAuthPage;
-	JsonReader createAccountJsonReader;
+	JsonReader jsonReader;
 
 	/**
 	 * Setup method that runs before each test.
 	 * 
-	 * <p>Initializes browser, applies waits, loads application URL, 
-	 * initializes Page Objects, and loads test data from JSON.</p>
+	 * <p>
+	 * Initializes browser, applies waits, loads application URL, initializes Page
+	 * Objects, and loads test data from JSON.
+	 * </p>
 	 */
 	@BeforeMethod
 	public void start() {
@@ -48,8 +52,8 @@ public class JobSeekerAuthTest {
 		jobSeekerAuthPage = new JobSeekerAuthPage(driver);
 
 		// load JSON test data
-		createAccountJsonReader = new JsonReader();
-		createAccountJsonReader.loadJson("createAccountData");
+		jsonReader = new JsonReader();
+		jsonReader.loadJson("createAccountData");
 	}
 
 	/**
@@ -59,7 +63,6 @@ public class JobSeekerAuthTest {
 	public void navigateToCreateAccountTest() {
 		headerNavigationPage.clickJobSeeker(); // click on the job seeker button
 		jobSeekerAuthPage.clickCreateAccount(); // click on create account button
-		System.out.println(driver.getTitle());
 		// validate that user is redirected to job seeker account creation page
 		Assert.assertTrue(driver.getCurrentUrl().contains("requestType=jobSeeker"),
 				"Navigation to Job Seeker account creation page failed!");
@@ -81,8 +84,7 @@ public class JobSeekerAuthTest {
 	 * @param resumePath      - file path of the resume to upload
 	 * @param agreeTerms      - checkbox flag for terms agreement
 	 */
-	@Test(priority = 2, dependsOnMethods = "navigateToCreateAccountTest", dataProvider = "getCreateAccountData", 
-			dataProviderClass = com.imejob.dataprovider.CreateAccountJsonDataProvider.class)
+	@Test(priority = 2, dependsOnMethods = "navigateToCreateAccountTest", dataProvider = "getCreateAccountData", dataProviderClass = com.imejob.dataprovider.CreateAccountJsonDataProvider.class)
 	public void createAccountTest(String firstName, String middleName, String lastName, String email, String phone,
 			String totalExperience, String location, String password, String gender, String[] skillsArray,
 			String resumePath, boolean agreeTerms) {
@@ -95,16 +97,30 @@ public class JobSeekerAuthTest {
 		// fill the account form using POM
 		jobSeekerAuthPage.createAccount(firstName, middleName, lastName, email, phone, password, totalExperience,
 				location, gender, skills, resumePath, agreeTerms);
-		WaitUtils.applyHardWait();
+
 		jobSeekerAuthPage.clickRegister(); // click register button
-		
-		System.out.println("current title: "+driver.getTitle());
+
+		String message = jobSeekerAuthPage.getRegisterStatusMessage(); // stores the status
+		if (message != null) {
+			System.out.println("Register outcome: " + message);
+			Assert.assertTrue(message.contains("Email address") || message.contains("Mobile number"));
+		} else {
+			jobSeekerAuthPage.enterOTP(jsonReader.getValue("createAccount", "otp")); // sends 1,2,3,4 to the 4 separate
+																						// boxes
+			jobSeekerAuthPage.clickVerifyAndProceed();
+			String exp_url = "https://client.imejob.com/dashboard/job-seeker/applications";
+			WaitUtils.waitUntilUrlContains(driver, exp_url);
+			Assert.assertEquals(exp_url, driver.getCurrentUrl());
+		}
+
 	}
 
 	/**
 	 * Tear down method that runs after each test.
 	 * 
-	 * <p>Closes the browser after test execution.</p>
+	 * <p>
+	 * Closes the browser after test execution.
+	 * </p>
 	 */
 	@AfterMethod
 	public void close() {

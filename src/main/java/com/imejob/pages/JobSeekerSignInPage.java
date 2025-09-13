@@ -78,11 +78,8 @@ public class JobSeekerSignInPage {
         driver.switchTo().frame(driver.findElement(By.xpath("//iframe[contains(@src, 'recaptcha')]")));
         WaitUtils.waitForElementClickable(driver, checkBox);
         checkBox.click();
+       // WaitUtils.waitForAttributeToBe(driver, checkBox, "aria-checked", "true");
         driver.switchTo().defaultContent();
-
-        // Wait for Sign In button to be clickable and click
-        WaitUtils.waitForElementClickable(driver, signIn);
-        signIn.click();
     }
 
     /**
@@ -100,5 +97,10 @@ public class JobSeekerSignInPage {
      */
     public void clickLogin() {
         login.click();
+    }
+    
+    public void clickSignIn() {
+        WaitUtils.waitForElementClickable(driver, signIn);
+        signIn.click();
     }
 }
