@@ -1,0 +1,11 @@
+{
+    "jobSearch": {
+      "skills": ["Java", "Selenium"],
+      "location": "Bangalore"
+    },
+  "filters": {
+    "companyName": "Divum Corporate Services Pvt Ltd",
+    "experience": "Fresher",
+    "salary": "3 - 6 Lakhs"
+  }
+}
