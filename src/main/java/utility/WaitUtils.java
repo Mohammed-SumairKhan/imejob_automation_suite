@@ -3,6 +3,7 @@ package utility;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -87,4 +88,18 @@ public class WaitUtils {
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
 	}
 
+	/**
+	 * Waits until the web page is fully loaded.
+	 *
+	 * This method uses an explicit wait with JavaScriptExecutor to check the
+	 * document's readyState. The wait continues until the page is completely loaded
+	 * ("complete").
+	 *
+	 * @param driver the WebDriver instance controlling the browser
+	 */
+	public static void waitForPageToLoad(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(propertiesReader.getExplicitWait()));
+		wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState")
+				.equals("complete"));
+	}
 }
