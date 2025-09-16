@@ -69,8 +69,8 @@ public class PropertiesReader {
     	return Integer.parseInt(properties.getProperty("explicit"));
     }
     
-    public String getJobSeekerDashboardUrl() {
-        return properties.getProperty("jobseeker-dashboard-url");  // Fetch base URL from config.properties
+    public String getUrl2() {
+        return properties.getProperty("url2");  // Fetch base URL from config.properties
     }
 }
 

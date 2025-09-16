@@ -167,7 +167,7 @@ public class HomePageJobCardsTest {
 	public void applyJob(String firstName, String middleName, String lastName, String email, String phone,
 			String experience, String location, String noticePeriod, String expectedCTC, String[] skillsArray,
 			boolean newResume, String resumePath) {
-
+		
 		jobCardsPage.clickFirstCard(); // Click the first job card
 		jobCardsPage.clickOnApply(); // Click Apply button
 

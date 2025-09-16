@@ -80,6 +80,7 @@ public class JobSeekerSignInPage {
         checkBox.click();
        // WaitUtils.waitForAttributeToBe(driver, checkBox, "aria-checked", "true");
         driver.switchTo().defaultContent();
+        WaitUtils.applyHardWait();
     }
 
     /**

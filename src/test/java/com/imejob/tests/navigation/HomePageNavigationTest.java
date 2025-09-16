@@ -72,7 +72,8 @@ public class HomePageNavigationTest {
         }
 
         // Verify URL contains WhatsApp link
-        Assert.assertTrue(driver.getCurrentUrl().contains("wa.me"));
+        WaitUtils.waitUntilUrlContains(driver, "whatsapp.com");
+        Assert.assertTrue(driver.getCurrentUrl().contains("whatsapp.com"));
 
         // Close new tab and switch back to main window
         driver.close();
