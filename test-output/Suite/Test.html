@@ -1,0 +1,776 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>61/9/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Sep 15 13:36:33 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>1028 seconds (1028846 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testPythonJobsBangaloreLink()'><b>testPythonJobsBangaloreLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td><div><pre>java.lang.RuntimeException: No new window found to switch!
+	at utility.WindowUtils.switchToNewWindow(WindowUtils.java:20)
+	at com.imejob.dataprovider.TestUtils.verifyFooterLink(TestUtils.java:30)
+	at com.imejob.tests.navigation.FooterNavigationTest.testPythonJobsBangaloreLink(FooterNavigationTest.java:169)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace891709829", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace891709829'><pre>java.lang.RuntimeException: No new window found to switch!
+	at utility.WindowUtils.switchToNewWindow(WindowUtils.java:20)
+	at com.imejob.dataprovider.TestUtils.verifyFooterLink(TestUtils.java:30)
+	at com.imejob.tests.navigation.FooterNavigationTest.testPythonJobsBangaloreLink(FooterNavigationTest.java:169)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testJobPostingPortalsLink()'><b>testJobPostingPortalsLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td><div><pre>java.lang.RuntimeException: No new window found to switch!
+	at utility.WindowUtils.switchToNewWindow(WindowUtils.java:20)
+	at com.imejob.dataprovider.TestUtils.verifyFooterLink(TestUtils.java:30)
+	at com.imejob.tests.navigation.FooterNavigationTest.testJobPostingPortalsLink(FooterNavigationTest.java:127)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1214118601", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1214118601'><pre>java.lang.RuntimeException: No new window found to switch!
+	at utility.WindowUtils.switchToNewWindow(WindowUtils.java:20)
+	at com.imejob.dataprovider.TestUtils.verifyFooterLink(TestUtils.java:30)
+	at com.imejob.tests.navigation.FooterNavigationTest.testJobPostingPortalsLink(FooterNavigationTest.java:127)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>84</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.JobSearchFilterTest.verifyJobsBySalary()'><b>verifyJobsBySalary</b><br>Test class: com.imejob.tests.functional.JobSearchFilterTest</td>
+<td><div><pre>java.lang.AssertionError: First job did not match salary filter: 3 - 6 Lakhs expected [true] but found [false]
+	at com.imejob.tests.functional.JobSearchFilterTest.verifyJobsBySalary(JobSearchFilterTest.java:141)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace792275116", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace792275116'><pre>java.lang.AssertionError: First job did not match salary filter: 3 - 6 Lakhs expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.imejob.tests.functional.JobSearchFilterTest.verifyJobsBySalary(JobSearchFilterTest.java:141)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>com.imejob.tests.functional.JobSearchFilterTest@5fbe4146</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.HomePageJobCardsTest.applyJob()'><b>applyJob</b><br>Test class: com.imejob.tests.functional.HomePageJobCardsTest<br>Parameters: Mohammed, Sumair, Khan, sumairk0777@gmail.com, 9916358557, 0 Years, Bangalore, 30 Days, 4 Lakh INR, [Ljava.lang.String;@4a901445, false, D:\eclipse\ImeJob_Automation_Suite\resume\Mohammed_Sumair_Khan_Resume.pdf</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[contains(text(),&apos;Hurry!&apos;) or contains(text(),&apos;already applied&apos;)] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53470}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53470/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fcfdea2b23198db60d5c651f48b5c628
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utility.WaitUtils.waitForElementVisible(WaitUtils.java:65)
+	at com.imejob.pages.JobCardsPage.getApplicationStatusMessage(JobCardsPage.java:281)
+	at com.imejob.tests.functional.HomePageJobCardsTest.applyJob(HomePageJobCardsTest.java:180)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace880934808", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace880934808'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[contains(text(),&apos;Hurry!&apos;) or contains(text(),&apos;already applied&apos;)] (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.128, chrome: {chromedriverVersion: 140.0.7339.82 (bc93617e21c3..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53470}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53470/devtoo..., se:cdpVersion: 140.0.7339.128, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fcfdea2b23198db60d5c651f48b5c628
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at utility.WaitUtils.waitForElementVisible(WaitUtils.java:65)
+	at com.imejob.pages.JobCardsPage.getApplicationStatusMessage(JobCardsPage.java:281)
+	at com.imejob.tests.functional.HomePageJobCardsTest.applyJob(HomePageJobCardsTest.java:180)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>8</td>
+<td>com.imejob.tests.functional.HomePageJobCardsTest@79d8407f</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testHireSoftwareDevelopersLink()'><b>testHireSoftwareDevelopersLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td><div><pre>java.lang.RuntimeException: No new window found to switch!
+	at utility.WindowUtils.switchToNewWindow(WindowUtils.java:20)
+	at com.imejob.dataprovider.TestUtils.verifyFooterLink(TestUtils.java:30)
+	at com.imejob.tests.navigation.FooterNavigationTest.testHireSoftwareDevelopersLink(FooterNavigationTest.java:120)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace398513212", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace398513212'><pre>java.lang.RuntimeException: No new window found to switch!
+	at utility.WindowUtils.switchToNewWindow(WindowUtils.java:20)
+	at com.imejob.dataprovider.TestUtils.verifyFooterLink(TestUtils.java:30)
+	at com.imejob.tests.navigation.FooterNavigationTest.testHireSoftwareDevelopersLink(FooterNavigationTest.java:120)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.JobSearchFilterTest.verifyJobsByExperience()'><b>verifyJobsByExperience</b><br>Test class: com.imejob.tests.functional.JobSearchFilterTest</td>
+<td><div><pre>java.lang.AssertionError: First job did not match experience filter: Fresher expected [true] but found [false]
+	at com.imejob.tests.functional.JobSearchFilterTest.verifyJobsByExperience(JobSearchFilterTest.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2048625222", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2048625222'><pre>java.lang.AssertionError: First job did not match experience filter: Fresher expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at com.imejob.tests.functional.JobSearchFilterTest.verifyJobsByExperience(JobSearchFilterTest.java:116)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>com.imejob.tests.functional.JobSearchFilterTest@5fbe4146</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testReactJsJobsBangaloreLink()'><b>testReactJsJobsBangaloreLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td><div><pre>java.lang.RuntimeException: No new window found to switch!
+	at utility.WindowUtils.switchToNewWindow(WindowUtils.java:20)
+	at com.imejob.dataprovider.TestUtils.verifyFooterLink(TestUtils.java:30)
+	at com.imejob.tests.navigation.FooterNavigationTest.testReactJsJobsBangaloreLink(FooterNavigationTest.java:162)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1636474039", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1636474039'><pre>java.lang.RuntimeException: No new window found to switch!
+	at utility.WindowUtils.switchToNewWindow(WindowUtils.java:20)
+	at com.imejob.dataprovider.TestUtils.verifyFooterLink(TestUtils.java:30)
+	at com.imejob.tests.navigation.FooterNavigationTest.testReactJsJobsBangaloreLink(FooterNavigationTest.java:162)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.HomePageNavigationTest.clickWhatsAppIconTest()'><b>clickWhatsAppIconTest</b><br>Test class: com.imejob.tests.navigation.HomePageNavigationTest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.imejob.tests.navigation.HomePageNavigationTest.clickWhatsAppIconTest(HomePageNavigationTest.java:75)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace706783822", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace706783822'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at com.imejob.tests.navigation.HomePageNavigationTest.clickWhatsAppIconTest(HomePageNavigationTest.java:75)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>6</td>
+<td>com.imejob.tests.navigation.HomePageNavigationTest@4961f6af</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.SearchTest.verifyInvalidSkillAndLocationShowsNoJobs()'><b>verifyInvalidSkillAndLocationShowsNoJobs</b><br>Test class: com.imejob.tests.functional.SearchTest</td>
+<td><div><pre>java.lang.AssertionError: Invalid skill and location should show &apos;No jobs found&apos; expected [No jobs found] but found [&apos;No jobs found&apos; message not displayed]
+	at com.imejob.tests.functional.SearchTest.verifyInvalidSkillAndLocationShowsNoJobs(SearchTest.java:141)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 30 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1995366577", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1995366577'><pre>java.lang.AssertionError: Invalid skill and location should show &apos;No jobs found&apos; expected [No jobs found] but found [&apos;No jobs found&apos; message not displayed]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1590)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at com.imejob.tests.functional.SearchTest.verifyInvalidSkillAndLocationShowsNoJobs(SearchTest.java:141)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>6</td>
+<td>com.imejob.tests.functional.SearchTest@71e9ddb4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.imejob.tests.functional.SearchTest.verifyEmptySearchShowsValidationMessage()'><b>verifyEmptySearchShowsValidationMessage</b><br>Test class: com.imejob.tests.functional.SearchTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.functional.SearchTest@71e9ddb4</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testFresherTestingQAJobsLink()'><b>testFresherTestingQAJobsLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>1</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testHiringServicesLink()'><b>testHiringServicesLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>2</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testFresherDataAnalystJobsLink()'><b>testFresherDataAnalystJobsLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>1</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.JobSearchFilterTest.testSelectRelevanceAZ()'><b>testSelectRelevanceAZ</b><br>Test class: com.imejob.tests.functional.JobSearchFilterTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.functional.JobSearchFilterTest@5fbe4146</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testFresherJavaJobsLink()'><b>testFresherJavaJobsLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>1</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testRecruitFromSocialMediaLink()'><b>testRecruitFromSocialMediaLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>1</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.JobSeekerSignInTest.forgetPassNavigationTest()'><b>forgetPassNavigationTest</b><br>Test class: com.imejob.tests.functional.JobSeekerSignInTest</td>
+<td></td>
+<td>4</td>
+<td>com.imejob.tests.functional.JobSeekerSignInTest@58a9760d</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.JobSearchFilterTest.verifyInternshipFilterJobs()'><b>verifyInternshipFilterJobs</b><br>Test class: com.imejob.tests.functional.JobSearchFilterTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.functional.JobSearchFilterTest@5fbe4146</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.HeaderNavigationTest.aboutUs()'><b>aboutUs</b><br>Test class: com.imejob.tests.navigation.HeaderNavigationTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.navigation.HeaderNavigationTest@394df057</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.SearchTest.verifySearchWithSpecialCharactersAndWhitespace()'><b>verifySearchWithSpecialCharactersAndWhitespace</b><br>Test class: com.imejob.tests.functional.SearchTest</td>
+<td></td>
+<td>2</td>
+<td>com.imejob.tests.functional.SearchTest@71e9ddb4</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testBookDemoLink()'><b>testBookDemoLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>6</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testFresherJobsLink()'><b>testFresherJobsLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>1</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.SearchTest.verifyJobsBySkillOnly()'><b>verifyJobsBySkillOnly</b><br>Test class: com.imejob.tests.functional.SearchTest</td>
+<td></td>
+<td>1</td>
+<td>com.imejob.tests.functional.SearchTest@71e9ddb4</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.HeaderNavigationTest.brandLogo()'><b>brandLogo</b><br>Test class: com.imejob.tests.navigation.HeaderNavigationTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.navigation.HeaderNavigationTest@394df057</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.EmployerAuthTest.verifyNavigateToSignIn()'><b>verifyNavigateToSignIn</b><br>Test class: com.imejob.tests.functional.EmployerAuthTest</td>
+<td></td>
+<td>3</td>
+<td>com.imejob.tests.functional.EmployerAuthTest@fbd1f6</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.EmployerAuthTest.verifyNavigateToCreateAccount()'><b>verifyNavigateToCreateAccount</b><br>Test class: com.imejob.tests.functional.EmployerAuthTest</td>
+<td></td>
+<td>9</td>
+<td>com.imejob.tests.functional.EmployerAuthTest@fbd1f6</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.JobSeekerSignInTest.signInTest()'><b>signInTest</b><br>Test class: com.imejob.tests.functional.JobSeekerSignInTest<br>Parameters: sumairk0777@gmail.com, Sumair@123</td>
+<td></td>
+<td>3</td>
+<td>com.imejob.tests.functional.JobSeekerSignInTest@58a9760d</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.HeaderNavigationTest.jobSeeker()'><b>jobSeeker</b><br>Test class: com.imejob.tests.navigation.HeaderNavigationTest</td>
+<td></td>
+<td>3</td>
+<td>com.imejob.tests.navigation.HeaderNavigationTest@394df057</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.HomePageJobCardsTest.testLoginButtonRedirectsToLoginPage()'><b>testLoginButtonRedirectsToLoginPage</b><br>Test class: com.imejob.tests.functional.HomePageJobCardsTest</td>
+<td></td>
+<td>5</td>
+<td>com.imejob.tests.functional.HomePageJobCardsTest@79d8407f</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.JobSeekerAuthTest.createAccountTest()'><b>createAccountTest</b><br>Test class: com.imejob.tests.functional.JobSeekerAuthTest<br>Parameters: Mohammed, Sumair, Khan, sumairk0@gmail.com, 9976358557, 0 Years, Bangalore, Sumair@1, Male, [Ljava.lang.String;@2bcf856f, D:\eclipse\ImeJob_Automation_Suite\resume\Mohammed_Sumair_Khan_Resume.pdf, true</td>
+<td></td>
+<td>10</td>
+<td>com.imejob.tests.functional.JobSeekerAuthTest@7530ad9c</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.EmployerAuthTest.verifyNavigateToForgotPassword()'><b>verifyNavigateToForgotPassword</b><br>Test class: com.imejob.tests.functional.EmployerAuthTest</td>
+<td></td>
+<td>6</td>
+<td>com.imejob.tests.functional.EmployerAuthTest@fbd1f6</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.JobSearchFilterTest.testSelectRelevanceZA()'><b>testSelectRelevanceZA</b><br>Test class: com.imejob.tests.functional.JobSearchFilterTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.functional.JobSearchFilterTest@5fbe4146</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.HeaderNavigationTest.contactUs()'><b>contactUs</b><br>Test class: com.imejob.tests.navigation.HeaderNavigationTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.navigation.HeaderNavigationTest@394df057</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.JobSearchFilterTest.verifyFreelanceFilterJobs()'><b>verifyFreelanceFilterJobs</b><br>Test class: com.imejob.tests.functional.JobSearchFilterTest</td>
+<td></td>
+<td>5</td>
+<td>com.imejob.tests.functional.JobSearchFilterTest@5fbe4146</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testTermsAndConditionLink()'><b>testTermsAndConditionLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.HeaderNavigationTest.blogs()'><b>blogs</b><br>Test class: com.imejob.tests.navigation.HeaderNavigationTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.navigation.HeaderNavigationTest@394df057</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.HomePageJobCardsTest.testClickFirstCard()'><b>testClickFirstCard</b><br>Test class: com.imejob.tests.functional.HomePageJobCardsTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.functional.HomePageJobCardsTest@79d8407f</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.SearchTest.verifyJobsBySkillAndLocation()'><b>verifyJobsBySkillAndLocation</b><br>Test class: com.imejob.tests.functional.SearchTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.functional.SearchTest@71e9ddb4</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testLinkedinLink()'><b>testLinkedinLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>4</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.JobSeekerSignInTest.loginNavigationTest()'><b>loginNavigationTest</b><br>Test class: com.imejob.tests.functional.JobSeekerSignInTest</td>
+<td></td>
+<td>4</td>
+<td>com.imejob.tests.functional.JobSeekerSignInTest@58a9760d</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testPricingLink()'><b>testPricingLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>2</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testSitemapLink()'><b>testSitemapLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>1</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.EmployerAuthTest.verifyNavigateToLogin()'><b>verifyNavigateToLogin</b><br>Test class: com.imejob.tests.functional.EmployerAuthTest</td>
+<td></td>
+<td>19</td>
+<td>com.imejob.tests.functional.EmployerAuthTest@fbd1f6</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.HomePageJobCardsTest.verifyDefaultJobCardTextIsNotEmpty()'><b>verifyDefaultJobCardTextIsNotEmpty</b><br>Test class: com.imejob.tests.functional.HomePageJobCardsTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.functional.HomePageJobCardsTest@79d8407f</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.SearchTest.verifyMultipleSkillsSearch()'><b>verifyMultipleSkillsSearch</b><br>Test class: com.imejob.tests.functional.SearchTest</td>
+<td></td>
+<td>2</td>
+<td>com.imejob.tests.functional.SearchTest@71e9ddb4</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.HomePageJobCardsTest.testClickLastCard()'><b>testClickLastCard</b><br>Test class: com.imejob.tests.functional.HomePageJobCardsTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.functional.HomePageJobCardsTest@79d8407f</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.HeaderNavigationTest.pricing()'><b>pricing</b><br>Test class: com.imejob.tests.navigation.HeaderNavigationTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.navigation.HeaderNavigationTest@394df057</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.JobSearchFilterTest.verifyJobsByCompanyFilter()'><b>verifyJobsByCompanyFilter</b><br>Test class: com.imejob.tests.functional.JobSearchFilterTest</td>
+<td></td>
+<td>1</td>
+<td>com.imejob.tests.functional.JobSearchFilterTest@5fbe4146</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.JobSearchFilterTest.verifyRemoteFilterJobs()'><b>verifyRemoteFilterJobs</b><br>Test class: com.imejob.tests.functional.JobSearchFilterTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.functional.JobSearchFilterTest@5fbe4146</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testPythonJobsMumbaiLink()'><b>testPythonJobsMumbaiLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testAboutLink()'><b>testAboutLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>7</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testImeJobCVAnalysisLink()'><b>testImeJobCVAnalysisLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>2</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testContactLink()'><b>testContactLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testHireBestDevelopersLink()'><b>testHireBestDevelopersLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>2</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.SearchTest.verifyCaseInsensitiveSearch()'><b>verifyCaseInsensitiveSearch</b><br>Test class: com.imejob.tests.functional.SearchTest</td>
+<td></td>
+<td>1</td>
+<td>com.imejob.tests.functional.SearchTest@71e9ddb4</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.JobSearchFilterTest.verifyContractFilterJobs()'><b>verifyContractFilterJobs</b><br>Test class: com.imejob.tests.functional.JobSearchFilterTest</td>
+<td></td>
+<td>5</td>
+<td>com.imejob.tests.functional.JobSearchFilterTest@5fbe4146</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.SearchTest.verifySearchByLocationWithoutSkillShowsValidationMessage()'><b>verifySearchByLocationWithoutSkillShowsValidationMessage</b><br>Test class: com.imejob.tests.functional.SearchTest</td>
+<td></td>
+<td>4</td>
+<td>com.imejob.tests.functional.SearchTest@71e9ddb4</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.HeaderNavigationTest.joinCommunity()'><b>joinCommunity</b><br>Test class: com.imejob.tests.navigation.HeaderNavigationTest</td>
+<td></td>
+<td>5</td>
+<td>com.imejob.tests.navigation.HeaderNavigationTest@394df057</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.HomePageNavigationTest.bookDemoNavTest()'><b>bookDemoNavTest</b><br>Test class: com.imejob.tests.navigation.HomePageNavigationTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.navigation.HomePageNavigationTest@4961f6af</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.HeaderNavigationTest.employer()'><b>employer</b><br>Test class: com.imejob.tests.navigation.HeaderNavigationTest</td>
+<td></td>
+<td>4</td>
+<td>com.imejob.tests.navigation.HeaderNavigationTest@394df057</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testJavaJobsBangaloreLink()'><b>testJavaJobsBangaloreLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>1</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testAboutUsLink()'><b>testAboutUsLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>3</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testTermsLink()'><b>testTermsLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.HomePageJobCardsTest.verifyDefaultJobCardsCount()'><b>verifyDefaultJobCardsCount</b><br>Test class: com.imejob.tests.functional.HomePageJobCardsTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.functional.HomePageJobCardsTest@79d8407f</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.HeaderNavigationTest.jobSearch()'><b>jobSearch</b><br>Test class: com.imejob.tests.navigation.HeaderNavigationTest</td>
+<td></td>
+<td>3</td>
+<td>com.imejob.tests.navigation.HeaderNavigationTest@394df057</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.JobSeekerAuthTest.navigateToCreateAccountTest()'><b>navigateToCreateAccountTest</b><br>Test class: com.imejob.tests.functional.JobSeekerAuthTest</td>
+<td></td>
+<td>3</td>
+<td>com.imejob.tests.functional.JobSeekerAuthTest@7530ad9c</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.HomePageNavigationTest.CreateAccountNavTest()'><b>CreateAccountNavTest</b><br>Test class: com.imejob.tests.navigation.HomePageNavigationTest</td>
+<td></td>
+<td>3</td>
+<td>com.imejob.tests.navigation.HomePageNavigationTest@4961f6af</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.FooterNavigationTest.testBestITJobPortalLink()'><b>testBestITJobPortalLink</b><br>Test class: com.imejob.tests.navigation.FooterNavigationTest</td>
+<td></td>
+<td>1</td>
+<td>com.imejob.tests.navigation.FooterNavigationTest@5aebe890</td></tr>
+<tr>
+<td title='com.imejob.tests.navigation.HomePageNavigationTest.ViewAllJobNavTest()'><b>ViewAllJobNavTest</b><br>Test class: com.imejob.tests.navigation.HomePageNavigationTest</td>
+<td></td>
+<td>1</td>
+<td>com.imejob.tests.navigation.HomePageNavigationTest@4961f6af</td></tr>
+<tr>
+<td title='com.imejob.tests.functional.HomePageJobCardsTest.verifyFirstAndLastJobCardContainsRequiredFields()'><b>verifyFirstAndLastJobCardContainsRequiredFields</b><br>Test class: com.imejob.tests.functional.HomePageJobCardsTest</td>
+<td></td>
+<td>0</td>
+<td>com.imejob.tests.functional.HomePageJobCardsTest@79d8407f</td></tr>
+</table><p>
+</body>
+</html>

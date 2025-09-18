@@ -1,164 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-<<<<<<< HEAD
-  <suite started-at="2025-09-12T18:35:51 IST" name="Default suite" finished-at="2025-09-12T18:36:35 IST" duration-ms="43826">
+  <suite started-at="2025-09-16T20:37:22 IST" name="Default suite" finished-at="2025-09-16T20:37:49 IST" duration-ms="26908">
     <groups>
     </groups>
-    <test started-at="2025-09-12T18:35:51 IST" name="Default test" finished-at="2025-09-12T18:36:35 IST" duration-ms="43826">
-      <class name="com.imejob.tests.functional.HomePageJobCardsTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:35:51 IST" name="setUp" finished-at="2025-09-12T18:35:59 IST" duration-ms="7519" status="PASS">
+    <test started-at="2025-09-16T20:37:22 IST" name="Default test" finished-at="2025-09-16T20:37:49 IST" duration-ms="26908">
+      <class name="com.imejob.tests.functional.EmployerAuthTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.EmployerAuthTest@3270d194]" started-at="2025-09-16T20:37:22 IST" name="setUp" finished-at="2025-09-16T20:37:25 IST" duration-ms="3210" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyDefaultJobCardsCount()[pri:1, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:35:59 IST" name="verifyDefaultJobCardsCount" finished-at="2025-09-12T18:35:59 IST" duration-ms="67" status="PASS">
+        <test-method signature="verifyNavigateToCreateAccount()[pri:1, instance:com.imejob.tests.functional.EmployerAuthTest@3270d194]" started-at="2025-09-16T20:37:25 IST" name="verifyNavigateToCreateAccount" finished-at="2025-09-16T20:37:29 IST" duration-ms="3411" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDefaultJobCardsCount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:35:59 IST" name="tearDown" finished-at="2025-09-12T18:36:02 IST" duration-ms="2853" status="PASS">
+        </test-method> <!-- verifyNavigateToCreateAccount -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.EmployerAuthTest@3270d194]" started-at="2025-09-16T20:37:29 IST" name="tearDown" finished-at="2025-09-16T20:37:29 IST" duration-ms="293" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:02 IST" name="setUp" finished-at="2025-09-12T18:36:08 IST" duration-ms="5729" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.EmployerAuthTest@3270d194]" started-at="2025-09-16T20:37:29 IST" name="setUp" finished-at="2025-09-16T20:37:33 IST" duration-ms="3468" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyDefaultJobCardTextIsNotEmpty()[pri:2, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:08 IST" name="verifyDefaultJobCardTextIsNotEmpty" finished-at="2025-09-12T18:36:08 IST" duration-ms="884" status="PASS">
+        <test-method signature="verifyNavigateToSignIn()[pri:2, instance:com.imejob.tests.functional.EmployerAuthTest@3270d194]" started-at="2025-09-16T20:37:33 IST" name="verifyNavigateToSignIn" finished-at="2025-09-16T20:37:36 IST" duration-ms="3562" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDefaultJobCardTextIsNotEmpty -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:08 IST" name="tearDown" finished-at="2025-09-12T18:36:09 IST" duration-ms="725" status="PASS">
+        </test-method> <!-- verifyNavigateToSignIn -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.EmployerAuthTest@3270d194]" started-at="2025-09-16T20:37:36 IST" name="tearDown" finished-at="2025-09-16T20:37:36 IST" duration-ms="283" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:09 IST" name="setUp" finished-at="2025-09-12T18:36:16 IST" duration-ms="7283" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.EmployerAuthTest@3270d194]" started-at="2025-09-16T20:37:37 IST" name="setUp" finished-at="2025-09-16T20:37:40 IST" duration-ms="3231" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testClickFirstCard()[pri:3, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:16 IST" name="testClickFirstCard" finished-at="2025-09-12T18:36:17 IST" duration-ms="849" status="PASS">
+        <test-method signature="verifyNavigateToForgotPassword()[pri:3, instance:com.imejob.tests.functional.EmployerAuthTest@3270d194]" started-at="2025-09-16T20:37:40 IST" name="verifyNavigateToForgotPassword" finished-at="2025-09-16T20:37:41 IST" duration-ms="1758" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testClickFirstCard -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:17 IST" name="tearDown" finished-at="2025-09-12T18:36:18 IST" duration-ms="316" status="PASS">
+        </test-method> <!-- verifyNavigateToForgotPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.EmployerAuthTest@3270d194]" started-at="2025-09-16T20:37:41 IST" name="tearDown" finished-at="2025-09-16T20:37:42 IST" duration-ms="275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:18 IST" name="setUp" finished-at="2025-09-12T18:36:22 IST" duration-ms="4297" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.EmployerAuthTest@3270d194]" started-at="2025-09-16T20:37:42 IST" name="setUp" finished-at="2025-09-16T20:37:45 IST" duration-ms="3569" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testClickLastCard()[pri:4, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:22 IST" name="testClickLastCard" finished-at="2025-09-12T18:36:23 IST" duration-ms="783" status="PASS">
+        <test-method signature="verifyNavigateToLogin()[pri:4, instance:com.imejob.tests.functional.EmployerAuthTest@3270d194]" started-at="2025-09-16T20:37:45 IST" name="verifyNavigateToLogin" finished-at="2025-09-16T20:37:49 IST" duration-ms="3381" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testClickLastCard -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:23 IST" name="tearDown" finished-at="2025-09-12T18:36:23 IST" duration-ms="230" status="PASS">
+        </test-method> <!-- verifyNavigateToLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.EmployerAuthTest@3270d194]" started-at="2025-09-16T20:37:49 IST" name="tearDown" finished-at="2025-09-16T20:37:49 IST" duration-ms="398" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:23 IST" name="setUp" finished-at="2025-09-12T18:36:26 IST" duration-ms="3543" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="verifyFirstAndLastJobCardContainsRequiredFields()[pri:5, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:26 IST" name="verifyFirstAndLastJobCardContainsRequiredFields" finished-at="2025-09-12T18:36:27 IST" duration-ms="135" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyFirstAndLastJobCardContainsRequiredFields -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:27 IST" name="tearDown" finished-at="2025-09-12T18:36:27 IST" duration-ms="328" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:27 IST" name="setUp" finished-at="2025-09-12T18:36:32 IST" duration-ms="5334" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="testLoginButtonRedirectsToLoginPage()[pri:6, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:32 IST" name="testLoginButtonRedirectsToLoginPage" finished-at="2025-09-12T18:36:35 IST" duration-ms="2522" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLoginButtonRedirectsToLoginPage -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@5b7a5baa]" started-at="2025-09-12T18:36:35 IST" name="tearDown" finished-at="2025-09-12T18:36:35 IST" duration-ms="269" status="PASS">
-=======
-  <suite started-at="2025-09-12T23:38:19 IST" name="Default suite" finished-at="2025-09-12T23:38:29 IST" duration-ms="10926">
-    <groups>
-    </groups>
-    <test started-at="2025-09-12T23:38:19 IST" name="Default test" finished-at="2025-09-12T23:38:29 IST" duration-ms="10926">
-      <class name="com.imejob.tests.functional.HomePageJobCardsTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@557caf28]" started-at="2025-09-12T23:38:19 IST" name="setUp" finished-at="2025-09-12T23:38:21 IST" duration-ms="2384" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="applyJob(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,[Ljava.lang.String;,boolean,java.lang.String)[pri:7, instance:com.imejob.tests.functional.HomePageJobCardsTest@557caf28]" started-at="2025-09-12T23:38:21 IST" name="applyJob" data-provider="getPersonalInfoData" finished-at="2025-09-12T23:38:29 IST" duration-ms="7812" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Mohammed]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Sumair]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Khan]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[sumairk0777@gmail.com]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[9916358557]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[0 Years]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[Bangalore]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[30 Days]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[4 Lakh INR]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[[Ljava.lang.String;@5a6482a9]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[false]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[D:\eclipse\ImeJob_Automation_Suite\resume\Mohammed_Sumair_Khan_Resume.pdf]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- applyJob -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.functional.HomePageJobCardsTest@557caf28]" started-at="2025-09-12T23:38:29 IST" name="tearDown" finished-at="2025-09-12T23:38:29 IST" duration-ms="390" status="PASS">
->>>>>>> 0b023ba (WIP: save local changes)
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.imejob.tests.functional.HomePageJobCardsTest -->
+      </class> <!-- com.imejob.tests.functional.EmployerAuthTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
