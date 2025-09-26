@@ -101,7 +101,6 @@ public class JobSeekerSignInPage {
     }
     
     public void clickSignIn() {
-        WaitUtils.waitForElementClickable(driver, signIn);
         signIn.click();
     }
 }
