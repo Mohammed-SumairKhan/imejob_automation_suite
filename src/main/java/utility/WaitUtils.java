@@ -102,4 +102,9 @@ public class WaitUtils {
 		wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState")
 				.equals("complete"));
 	}
+
+	public static void waitForElementVisible(WebDriver driver, WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(propertiesReader.getExplicitWait()));
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
 }

@@ -270,8 +270,6 @@ public class JobCardsPage {
 		}
 	}
 
-	// -------------------- Utility --------------------
-
 	/**
 	 * Get the application status message after sending application.
 	 * @return messgae
