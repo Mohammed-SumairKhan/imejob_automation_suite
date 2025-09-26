@@ -6,6 +6,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import com.imejob.dataprovider.BookDemoDataProvider;
 import com.imejob.pages.BookDemoPage;
 
 import driverproperties.BrowserHandler;
@@ -27,43 +28,28 @@ public class BookDemoTest {
 		jsonReader = new JsonReader(); // Initialize JSON reader
 		WaitUtils.implicitWait(driver); // Apply implicit wait for element loading
 		bookDemoPage = new BookDemoPage(driver);
-		
-		
+
 	}
-	
+
 	@Test
 	public void clickBookDemoButtonTest() {
 		bookDemoPage.clickBookDemo();
 		WaitUtils.waitUntilUrlContains(driver, "contact-us");
-		Assert.assertTrue(driver.getCurrentUrl().contains("contact-us"), 
-				"Failed Url does not conatins contact-us");
+		Assert.assertTrue(driver.getCurrentUrl().contains("contact-us"), "Failed Url does not conatins contact-us");
 	}
 
-	@Test(dependsOnMethods = "clickBookDemoButtonTest")
-	public void fillContactFormTest() {
+	@Test(dependsOnMethods = "clickBookDemoButtonTest", dataProvider = "bookDemoData", dataProviderClass = BookDemoDataProvider.class)
+	public void fillContactFormTest(String email, String phoneNumber, String firstName, String lastName, String subject,
+			String messgae) {
 		bookDemoPage.clickBookDemo();
-		bookDemoPage.fillContactForm("sumair@123", "123", "samir", "khan"
-				,"Looking for Dedicated HR Services", "i have to connect");
+		bookDemoPage.fillContactForm(email, phoneNumber, firstName, lastName, subject, messgae);
 		bookDemoPage.clickSubmitButton();
+		Assert.assertTrue(bookDemoPage.getStatusMessage().contains("Thanks for contacting us!"));
 	}
-	
-	
-	
+
 	@AfterMethod
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 
-
-
-
 }
-
-
-
-
-
-
-
-
-
