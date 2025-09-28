@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import com.imejob.pages.EmployerAuthPage;
 
 import driverproperties.BrowserHandler;
+import helper.TestUtils;
 import utility.PropertiesReader;
 import utility.WaitUtils;
 
@@ -49,10 +50,8 @@ public class EmployerAuthTest {
 	 */
 	@Test(priority = 1)
 	public void verifyNavigateToCreateAccount() {
-		employerAuthPage.navigateToCreateAccount(); // Action
-		WaitUtils.waitUntilUrlContains(driver, "auth/register?"); // Explicit wait
-		Assert.assertTrue(driver.getCurrentUrl().contains("auth/register?"), // Assertion
-				"Failed: Create Account page not opened.");
+		employerAuthPage.navigateToCreateAccount(); // Action clicks on create account button
+		TestUtils.waitAndAssertUrlContains(driver, "auth/register?"); // wait & verify url
 	}
 
 	/**
@@ -61,10 +60,8 @@ public class EmployerAuthTest {
 	 */
 	@Test(priority = 2)
 	public void verifyNavigateToSignIn() {
-		employerAuthPage.navigateToSignIn(); // Action
-		WaitUtils.waitUntilUrlContains(driver, "auth/login?"); // Explicit wait
-		Assert.assertTrue(driver.getCurrentUrl().contains("auth/login?"), // Assertion
-				"Failed: Sign In page not opened.");
+		employerAuthPage.navigateToSignIn(); // Action clicks on signIn button
+		TestUtils.waitAndAssertUrlContains(driver, "auth/login?"); // wait & verify url
 	}
 
 	/**
@@ -73,10 +70,8 @@ public class EmployerAuthTest {
 	 */
 	@Test(priority = 3)
 	public void verifyNavigateToForgotPassword() {
-		employerAuthPage.navigateToForgotPassword(); // Action
-		WaitUtils.waitUntilUrlContains(driver, "auth/forgot-password?"); // Explicit wait
-		Assert.assertTrue(driver.getCurrentUrl().contains("auth/forgot-password?"), // Assertion
-				"Failed: Forgot Password page not opened.");
+		employerAuthPage.navigateToForgotPassword(); // Action clicks Forget Password button
+		TestUtils.waitAndAssertUrlContains(driver, "auth/forgot-password?"); // wait & verify url
 	}
 
 	/**
@@ -85,10 +80,8 @@ public class EmployerAuthTest {
 	 */
 	@Test(priority = 4)
 	public void verifyNavigateToLogin() {
-		employerAuthPage.navigateToLogin(); // Action
-		WaitUtils.waitUntilUrlContains(driver, "auth/login?"); // Explicit wait
-		Assert.assertTrue(driver.getCurrentUrl().contains("auth/login?"), // Assertion
-				"Failed: Login page not opened.");
+		employerAuthPage.navigateToLogin(); // Action clicks Login button
+		TestUtils.waitAndAssertUrlContains(driver, "auth/login?"); // wait & verify url
 	}
 
 	/**
