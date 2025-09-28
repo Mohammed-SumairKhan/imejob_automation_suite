@@ -107,4 +107,5 @@ public class WaitUtils {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(propertiesReader.getExplicitWait()));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
+
 }
