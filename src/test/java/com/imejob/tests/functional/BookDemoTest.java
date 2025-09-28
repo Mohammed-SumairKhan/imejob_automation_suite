@@ -10,6 +10,7 @@ import com.imejob.dataprovider.BookDemoDataProvider;
 import com.imejob.pages.BookDemoPage;
 
 import driverproperties.BrowserHandler;
+import helper.TestUtils;
 import utility.JsonReader;
 import utility.PropertiesReader;
 import utility.WaitUtils;
@@ -47,9 +48,7 @@ public class BookDemoTest {
     @Test
     public void clickBookDemoButtonTest() {
         bookDemoPage.clickBookDemo(); // Click Book Demo button //inline
-        WaitUtils.waitUntilUrlContains(driver, "contact-us"); // Wait until URL contains "contact-us" //inline
-        Assert.assertTrue(driver.getCurrentUrl().contains("contact-us"), 
-            "Failed: URL does not contain 'contact-us'"); // Assert URL contains expected text //inline
+        TestUtils.waitAndAssertUrlContains(driver, "contact-us"); // wait and verify url
     }
 
     /**
