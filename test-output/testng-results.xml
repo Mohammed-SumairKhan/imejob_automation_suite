@@ -1,78 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-27T00:12:24 IST" name="Default suite" finished-at="2025-09-27T00:12:38 IST" duration-ms="14066">
+  <suite started-at="2025-09-28T19:57:07 IST" name="Default suite" finished-at="2025-09-28T19:57:41 IST" duration-ms="33678">
     <groups>
     </groups>
-    <test started-at="2025-09-27T00:12:24 IST" name="Default test" finished-at="2025-09-27T00:12:38 IST" duration-ms="14066">
-      <class name="com.imejob.tests.navigation.SidebarTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.imejob.tests.navigation.SidebarTest@6c6cb480]" started-at="2025-09-27T00:12:24 IST" name="setup" finished-at="2025-09-27T00:12:32 IST" duration-ms="8359" status="PASS">
+    <test started-at="2025-09-28T19:57:07 IST" name="Default test" finished-at="2025-09-28T19:57:41 IST" duration-ms="33678">
+      <class name="com.imejob.tests.navigation.HomePageNavigationTest">
+        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.navigation.HomePageNavigationTest@7c7b252e]" started-at="2025-09-28T19:57:07 IST" name="start" finished-at="2025-09-28T19:57:14 IST" duration-ms="6539" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="testNavigationToSearchJob()[pri:1, instance:com.imejob.tests.navigation.SidebarTest@6c6cb480]" started-at="2025-09-27T00:12:32 IST" name="testNavigationToSearchJob" finished-at="2025-09-27T00:12:37 IST" duration-ms="5123" status="FAIL">
-          <exception class="java.lang.RuntimeException">
-            <message>
-              <![CDATA[Cann't click on: job searchorg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text() = 'Job Search']"}
-  (Session info: chrome=140.0.7339.187)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [47ca18e4339e5be7ee9008a07ca8cf7c, findElement {value=//span[text() = 'Job Search'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.187, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63692}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63692/devtoo..., se:cdpVersion: 140.0.7339.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 47ca18e4339e5be7ee9008a07ca8cf7c]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: Cann't click on: job searchorg.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[text() = 'Job Search']"}
-  (Session info: chrome=140.0.7339.187)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.8'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [47ca18e4339e5be7ee9008a07ca8cf7c, findElement {value=//span[text() = 'Job Search'], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.187, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63692}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63692/devtoo..., se:cdpVersion: 140.0.7339.187, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 47ca18e4339e5be7ee9008a07ca8cf7c
-at com.imejob.pages.SidebarPage.clickOn(SidebarPage.java:74)
-at com.imejob.tests.navigation.SidebarTest.testNavigationToSearchJob(SidebarTest.java:39)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.RuntimeException -->
+        </test-method> <!-- start -->
+        <test-method signature="CreateAccountNavTest()[pri:1, instance:com.imejob.tests.navigation.HomePageNavigationTest@7c7b252e]" started-at="2025-09-28T19:57:14 IST" name="CreateAccountNavTest" finished-at="2025-09-28T19:57:15 IST" duration-ms="1683" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNavigationToSearchJob -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.imejob.tests.navigation.SidebarTest@6c6cb480]" started-at="2025-09-27T00:12:37 IST" name="tearDown" finished-at="2025-09-27T00:12:38 IST" duration-ms="502" status="PASS">
+        </test-method> <!-- CreateAccountNavTest -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.navigation.HomePageNavigationTest@7c7b252e]" started-at="2025-09-28T19:57:15 IST" name="close" finished-at="2025-09-28T19:57:16 IST" duration-ms="370" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.imejob.tests.navigation.SidebarTest -->
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.navigation.HomePageNavigationTest@7c7b252e]" started-at="2025-09-28T19:57:16 IST" name="start" finished-at="2025-09-28T19:57:22 IST" duration-ms="5779" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="clickWhatsAppIconTest()[pri:2, instance:com.imejob.tests.navigation.HomePageNavigationTest@7c7b252e]" started-at="2025-09-28T19:57:22 IST" name="clickWhatsAppIconTest" finished-at="2025-09-28T19:57:24 IST" duration-ms="2847" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickWhatsAppIconTest -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.navigation.HomePageNavigationTest@7c7b252e]" started-at="2025-09-28T19:57:24 IST" name="close" finished-at="2025-09-28T19:57:25 IST" duration-ms="302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.navigation.HomePageNavigationTest@7c7b252e]" started-at="2025-09-28T19:57:25 IST" name="start" finished-at="2025-09-28T19:57:31 IST" duration-ms="5825" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="ViewAllJobNavTest()[pri:3, instance:com.imejob.tests.navigation.HomePageNavigationTest@7c7b252e]" started-at="2025-09-28T19:57:31 IST" name="ViewAllJobNavTest" finished-at="2025-09-28T19:57:32 IST" duration-ms="1795" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ViewAllJobNavTest -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.navigation.HomePageNavigationTest@7c7b252e]" started-at="2025-09-28T19:57:32 IST" name="close" finished-at="2025-09-28T19:57:33 IST" duration-ms="331" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="start()[pri:0, instance:com.imejob.tests.navigation.HomePageNavigationTest@7c7b252e]" started-at="2025-09-28T19:57:33 IST" name="start" finished-at="2025-09-28T19:57:40 IST" duration-ms="7505" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method signature="bookDemoNavTest()[pri:4, instance:com.imejob.tests.navigation.HomePageNavigationTest@7c7b252e]" started-at="2025-09-28T19:57:40 IST" name="bookDemoNavTest" finished-at="2025-09-28T19:57:40 IST" duration-ms="196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookDemoNavTest -->
+        <test-method is-config="true" signature="close()[pri:0, instance:com.imejob.tests.navigation.HomePageNavigationTest@7c7b252e]" started-at="2025-09-28T19:57:40 IST" name="close" finished-at="2025-09-28T19:57:41 IST" duration-ms="416" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- com.imejob.tests.navigation.HomePageNavigationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
