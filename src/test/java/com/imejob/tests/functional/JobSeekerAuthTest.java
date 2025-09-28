@@ -13,6 +13,7 @@ import com.imejob.pages.HeaderNavigationPage;
 import com.imejob.pages.JobSeekerAuthPage;
 
 import driverproperties.BrowserHandler;
+import helper.TestUtils;
 import utility.JsonReader;
 import utility.PropertiesReader;
 import utility.WaitUtils;
@@ -109,8 +110,7 @@ public class JobSeekerAuthTest {
 																						// boxes
 			jobSeekerAuthPage.clickVerifyAndProceed();
 			String exp_url = "https://client.imejob.com/dashboard/job-seeker/applications";
-			WaitUtils.waitUntilUrlContains(driver, exp_url);
-			Assert.assertEquals(exp_url, driver.getCurrentUrl());
+			TestUtils.waitAndAssertUrlExact(driver, exp_url);
 		}
 
 	}

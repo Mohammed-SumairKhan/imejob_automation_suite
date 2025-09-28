@@ -13,6 +13,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.imejob.pages.JobCardsPage;
 
 import driverproperties.BrowserHandler;
+import helper.TestUtils;
 import utility.JsonReader;
 import utility.PropertiesReader;
 import utility.WaitUtils;
@@ -75,13 +76,8 @@ public class HomePageJobCardsTest {
 	@Test(priority = 3)
 	public void testClickFirstCard() {
 		jobCardsPage.clickFirstCard(); // Click the first job card
-
-		String expectedUrlPart = jsonReader.getValue("defaultJobCards", "firstCard", "url"); // Get expected URL from
-																								// JSON
-		WaitUtils.waitUntilUrlContains(driver, expectedUrlPart); // Wait until URL contains expected part
-
-		Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrlPart), "First card URL mismatch"); // Verify
-																										// navigation
+		String expectedUrlPart = jsonReader.getValue("defaultJobCards", "firstCard", "url"); // Get expected URL from json
+		TestUtils.waitAndAssertUrlContains(driver, expectedUrlPart);
 	}
 
 	/**
@@ -92,12 +88,8 @@ public class HomePageJobCardsTest {
 	public void testClickLastCard() {
 		jobCardsPage.clickLastCard(); // Click the last job card
 
-		String expectedUrlPart = jsonReader.getValue("defaultJobCards", "lastCard", "url"); // Get expected URL from
-																							// JSON
-		WaitUtils.waitUntilUrlContains(driver, expectedUrlPart); // Wait until URL contains expected part
-
-		Assert.assertTrue(driver.getCurrentUrl().contains(expectedUrlPart), "Last card URL mismatch"); // Verify
-																										// navigation
+		String expectedUrlPart = jsonReader.getValue("defaultJobCards", "lastCard", "url"); // Get expected URL from Json
+		TestUtils.waitAndAssertUrlContains(driver, expectedUrlPart);
 	}
 
 	/**
@@ -152,12 +144,8 @@ public class HomePageJobCardsTest {
 		jobCardsPage.clickOnApply(); // Click Apply button
 		jobCardsPage.clickOnLogin(); // Click Login button
 
-		String expectedLoginUrl = jsonReader.getValue("jobCardActions", "loginButton", "url"); // Get expected login URL
-																								// from JSON
-		WaitUtils.waitUntilUrlContains(driver, expectedLoginUrl); // Wait for navigation
-
-		Assert.assertTrue(driver.getCurrentUrl().contains(expectedLoginUrl),
-				"Login button did not redirect to expected login page"); // Verify URL
+		String expectedLoginUrl = jsonReader.getValue("jobCardActions", "loginButton", "url"); // Get expected login URL from Json
+		TestUtils.waitAndAssertUrlContains(driver, expectedLoginUrl); // Verify URL
 	}
 
 	/**

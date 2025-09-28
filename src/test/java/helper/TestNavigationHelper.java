@@ -1,4 +1,4 @@
-package com.imejob.dataprovider;
+package helper;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;

@@ -1,7 +1,6 @@
 package com.imejob.tests.functional;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -11,6 +10,7 @@ import com.imejob.pages.JobSeekerSignInPage;
 
 import driverproperties.BrowserHandler;
 import helper.SignInDataProvider;
+import helper.TestUtils;
 import utility.PropertiesReader;
 import utility.WaitUtils;
 
@@ -38,26 +38,21 @@ public class JobSeekerSignInTest {
 	@Test(priority = 1, dataProvider = "signInData")
 	public void signInTest(String email, String password) {
 		jobSeekerSignInPage.signIn(email, password);
-		
 		jobSeekerSignInPage.clickSignIn();
-		
-		WaitUtils.waitUntilUrlContains(driver, "dashboard");
-		Assert.assertTrue(driver.getCurrentUrl().contains("dashboard"));;
+		TestUtils.waitAndAssertUrlContains(driver, "dashboard/job-seeker/applications");
 	}
 	
 	@Test(priority = 2)
 	public void forgetPassNavigationTest() {
 		jobSeekerSignInPage.clickForgetPassword();
-		WaitUtils.waitUntilUrlContains(driver, "auth/forgot-password?");
-		Assert.assertTrue(driver.getCurrentUrl().contains("auth/forgot-password?"));
+		TestUtils.waitAndAssertUrlContains(driver, "auth/forgot-password?");
 	}
 	
 	@Test(priority = 3)
 	public void loginNavigationTest() {
 		jobSeekerSignInPage.clickForgetPassword();
 		jobSeekerSignInPage.clickLogin();
-		WaitUtils.waitUntilUrlContains(driver, "auth/login?");
-		Assert.assertTrue(driver.getCurrentUrl().contains("auth/login?"));
+		TestUtils.waitAndAssertUrlContains(driver, "auth/login?");
 	}
 	
 	@AfterMethod

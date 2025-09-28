@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import com.imejob.pages.HomePage;
 
 import driverproperties.BrowserHandler;
+import helper.TestUtils;
 import utility.PropertiesReader;
 import utility.WaitUtils;
 
@@ -49,8 +50,7 @@ public class HomePageNavigationTest {
     @Test(priority = 1)
     public void CreateAccountNavTest() {
         homePage.clickCreateAccount(); // Click Create Account link
-        WaitUtils.waitUntilUrlContains(driver, "auth/login?"); // Wait until URL contains "auth/login?"
-        Assert.assertTrue(driver.getCurrentUrl().contains("auth/login?")); // Verify URL
+        TestUtils.waitAndAssertUrlContains(driver, "auth/login?"); // verify url
     }
 
     /**
@@ -72,8 +72,7 @@ public class HomePageNavigationTest {
         }
 
         // Verify URL contains WhatsApp link
-        WaitUtils.waitUntilUrlContains(driver, "whatsapp.com");
-        Assert.assertTrue(driver.getCurrentUrl().contains("whatsapp.com"));
+        TestUtils.waitAndAssertUrlContains(driver, "whatsapp.com");
 
         // Close new tab and switch back to main window
         driver.close();
@@ -86,8 +85,7 @@ public class HomePageNavigationTest {
     @Test(priority = 3)
     public void ViewAllJobNavTest() {
         homePage.clickViewAllJobs(); // Click "View all jobs"
-        WaitUtils.waitUntilUrlContains(driver, "all-jobs"); // Wait until URL contains "all-jobs"
-        Assert.assertTrue(driver.getCurrentUrl().endsWith("all-jobs")); // Verify URL
+        TestUtils.waitAndAssertUrlContains(driver, "all-jobs");// Verify URL
     }
 
     /**
@@ -96,8 +94,7 @@ public class HomePageNavigationTest {
     @Test(priority = 4)
     public void bookDemoNavTest() {
         homePage.clickBookDemo(); // Click "Book a demo"
-        WaitUtils.waitUntilUrlContains(driver, "contact-us"); // Wait until URL contains "contact-us"
-        Assert.assertTrue(driver.getCurrentUrl().endsWith("contact-us")); // Verify URL
+        TestUtils.waitAndAssertUrlContains(driver, "contact-us");// Verify URL
     }
 
     /**
