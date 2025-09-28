@@ -1,4 +1,4 @@
-package com.imejob.dataprovider;
+package helper;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -38,4 +38,17 @@ public class TestUtils {
         driver.close();
         WindowUtils.switchBackToParent(driver, parentWindow);
     }
+    
+    public static void waitAndAssertUrlContains(WebDriver driver, String expectedPart) {
+        WaitUtils.waitUntilUrlContains(driver, expectedPart);
+        Assert.assertTrue(driver.getCurrentUrl().contains(expectedPart),
+            "Expected URL to contain: " + expectedPart + " but got: " + driver.getCurrentUrl());
+    }
+    
+    public static void waitAndAssertUrlExact(WebDriver driver, String expectedUrl) {
+        WaitUtils.waitUntilUrlContains(driver, expectedUrl); // optional, wait for URL to load
+        Assert.assertEquals(driver.getCurrentUrl(), expectedUrl,
+            "Expected URL: " + expectedUrl + " but got: " + driver.getCurrentUrl());
+    }
+
 }
