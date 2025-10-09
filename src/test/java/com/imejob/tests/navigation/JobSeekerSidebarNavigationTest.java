@@ -6,7 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.imejob.pages.JobSeekerSignInPage;
-import com.imejob.pages.SidebarPage;
+import com.imejob.pages.JobSeekerSidebarPage;
 
 import driverproperties.BrowserHandler;
 import helper.TestUtils;
@@ -29,7 +29,7 @@ public class JobSeekerSidebarNavigationTest {
 	WebDriver driver; // WebDriver instance to control the browser
 	PropertiesReader propertiesReader; // Utility to read properties like URL, browser name
 	JobSeekerSignInPage signInPage; // Page object for Job Seeker Sign In page
-	SidebarPage sidebarPage; // Page object for Sidebar navigation
+	JobSeekerSidebarPage sidebarPage; // Page object for Sidebar navigation
 	JsonReader jsonReader; // Utility to read JSON test data
 
 	/**
@@ -45,7 +45,7 @@ public class JobSeekerSidebarNavigationTest {
 
 		jsonReader.loadJson("signInData"); // Load JSON data for sign-in
 		signInPage = new JobSeekerSignInPage(driver); // Initialize sign-in page object
-		sidebarPage = new SidebarPage(driver); // Initialize sidebar page object
+		sidebarPage = new JobSeekerSidebarPage(driver); // Initialize sidebar page object
 
 		// Use credentials from PropertiesReader
 		String email = jsonReader.getValue("signIn", "email"); // Fetch email

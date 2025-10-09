@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.imejob.tests.functional.JobSeekerApplicationTest">
+      <class name="com.imejob.tests.functional.JobSeekerDocumentTest">
         <methods>
-          <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="clickViewORChat"/>
+          <include name="setup"/>
+          <include name="testUploadDocumentWithoutSelectingCategory" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.imejob.tests.functional.JobSeekerApplicationTest -->
+      </class> <!-- com.imejob.tests.functional.JobSeekerDocumentTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

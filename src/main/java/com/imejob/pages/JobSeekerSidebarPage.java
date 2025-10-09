@@ -12,7 +12,7 @@ import utility.WaitUtils;
  * Provides WebElements for each sidebar item and a method to click on them.
  * Supports navigation to pages like Job Search, Interviews, Documents, Applications, Profile, My Posts, Saved Jobs, Community, Dashboard, Home, and Logout.
  */
-public class SidebarPage {
+public class JobSeekerSidebarPage {
 
 	WebDriver driver; // WebDriver instance to control the browser
 
@@ -59,7 +59,7 @@ public class SidebarPage {
 	 * Constructor to initialize WebDriver and page elements
 	 * @param driver WebDriver instance
 	 */
-	public SidebarPage(WebDriver driver) {
+	public JobSeekerSidebarPage(WebDriver driver) {
 		this.driver = driver; // Initialize driver
 		PageFactory.initElements(driver, this); // Initialize page elements with PageFactory
 	}
