@@ -47,6 +47,38 @@ public class JobSeekerDocumentTest {
 	}
 
 	/**
+	 * Test method to verify that uploading a document without selecting a category
+	 * shows the appropriate error message.
+	 * 
+	 * Steps: 1. Wait until the dashboard URL is loaded. 2. Click on the "Documents"
+	 * link in the sidebar. 3. Attempt to upload a document without selecting any
+	 * category. 4. Assert that the error/danger message is visible indicating that
+	 * a category must be selected.
+	 * 
+	 * @param category Name of the document category (from data provider, not used
+	 *                 in this test)
+	 * @param filePath Absolute path of the document file to upload (from data
+	 *                 provider)
+	 */
+	@Test(priority = 1, dataProvider = "documentData", dataProviderClass = DocumentDataProvider.class)
+	public void testUploadDocumentWithoutSelectingCategory(String category, String filePath) {
+
+		WaitUtils.waitUntilUrlContains(driver, "dashboard/job-seeker/applications"); // Wait until the dashboard page is
+																						// fully loaded and URL contains
+																						// expected text
+
+		documentPage.clickOnDocuments(); // Navigate to the Documents page via sidebar
+
+		// Attempt to upload the document without selecting a category
+		// This method should handle only sending the file to the input and clicking
+		// Upload
+		documentPage.uploadDocumentToNoCategory(filePath);
+
+		Assert.assertTrue(documentPage.isDangerTextVisible(), "Please select category"); // Assert is Danger text is
+																							// visible or not
+	}
+
+	/**
 	 * Test method to verify that a Job Seeker can upload a document to a specific
 	 * category. Uses data from the DocumentDataProvider (category name and file
 	 * path).
@@ -60,7 +92,7 @@ public class JobSeekerDocumentTest {
 	 * @param filePath Absolute path of the document file to upload (from data
 	 *                 provider)
 	 */
-	@Test(dataProvider = "documentData", dataProviderClass = DocumentDataProvider.class)
+	@Test(priority = 2,dataProvider = "documentData", dataProviderClass = DocumentDataProvider.class)
 	public void testUploadDocumentToCategory(String category, String filePath) {
 		WaitUtils.waitUntilUrlContains(driver, "dashboard/job-seeker/applications"); // wait for url contains
 		documentPage.clickOnDocuments(); // clicks on document link
