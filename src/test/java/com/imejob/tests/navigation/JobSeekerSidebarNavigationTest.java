@@ -25,7 +25,7 @@ import utility.WindowUtils;
  * It uses Page Object Model (POM) with SidebarPage and JobSeekerSignInPage objects, 
  * and TestUtils for reusable wait and assertion methods.
  */
-public class SidebarNavigationTest {
+public class JobSeekerSidebarNavigationTest {
 	WebDriver driver; // WebDriver instance to control the browser
 	PropertiesReader propertiesReader; // Utility to read properties like URL, browser name
 	JobSeekerSignInPage signInPage; // Page object for Job Seeker Sign In page
