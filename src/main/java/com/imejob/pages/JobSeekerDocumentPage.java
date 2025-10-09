@@ -33,6 +33,9 @@ public class JobSeekerDocumentPage {
 	@FindBy(xpath = "//*[contains(text(),'Document Uploaded')]")
 	WebElement uploadSuccessPopup; // element to check popUp message
 
+	@FindBy(xpath = "//div[contains(@class, 'text-danger')]")
+	WebElement textDanger; // element to check for the text
+
 	/**
 	 * This element appears only after the document is successfully uploaded. We use
 	 * it to wait and verify that the upload is complete before clicking upload
@@ -135,6 +138,38 @@ public class JobSeekerDocumentPage {
 	public boolean isUploadSuccessful() {
 		String message = getUploadSuccessMessage();
 		return message != null && message.toLowerCase().contains("document uploaded successfully");
+	}
+
+	/**
+	 * Attempts to upload a document **without selecting any category**. This method
+	 * is used for negative testing to verify that the system prevents uploads when
+	 * no category is chosen.
+	 *
+	 * @param filePath Absolute path of the document file to upload
+	 */
+	public void uploadDocumentToNoCategory(String filePath) {
+		try {
+			// Note: No category is selected intentionally
+			uploadDocument.sendKeys(filePath); // Upload the document file to the input element
+			WaitUtils.waitForElementVisible(driver, verifyTheDocument);// This ensures that the upload attempt has been
+																		// registered by the UI
+			uploadButton.click(); // Click the Upload button to attempt uploading the document
+		} catch (Exception e) {
+			throw new RuntimeException("Failed to upload document: " + e); // Throw a runtime exception if any step
+																			// fails
+		}
+	}
+
+	/**
+	 * Checks whether the danger/error message is visible on the Documents page.
+	 * This is used to verify that the user is prompted to select a category before
+	 * uploading a document.
+	 *
+	 * @return true if the danger text is displayed; false otherwise
+	 */
+	public boolean isDangerTextVisible() {
+		WaitUtils.waitForElementVisible(driver, textDanger); // Wait for the visibility of the element
+		return textDanger.isDisplayed();// Return whether the danger text is actually displayed
 	}
 
 }
