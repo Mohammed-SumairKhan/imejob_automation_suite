@@ -45,6 +45,7 @@ public class JobSeekerProfileTest {
 
 		WaitUtils.waitForPageToLoad(driver); // Wait for dashboard page to fully load
 	}
+	
 	/**
 	 * This method test that 
 	 * edit profile button and update button are working properly or not..
